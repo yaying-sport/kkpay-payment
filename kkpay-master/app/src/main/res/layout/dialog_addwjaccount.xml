@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="307dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_bg_common_dialog"
+    android:orientation="vertical"
+    skin:enable="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/depositsh_addwj_title_tip"
+                android:textColor="@color/comm_dialog_title"
+                android:textSize="18dp"
+                skin:enable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_addwj_dialog_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/sh_m_color"
+                android:textSize="12dp"
+                android:text="@string/depositsh_wj_empty_tip" />
+
+            <EditText
+                android:id="@+id/et_account"
+                style="@style/login_Edit_Style"
+                android:gravity="center_vertical"
+                android:hint="@string/addManagesh_input_wj_account_tip"
+                android:textCursorDrawable="@drawable/shape_edit_text_cursor"
+                android:maxLength="32"
+                android:maxLines="1"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            style="@style/dialog_cancel_text_color"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_comm_dialog_cancel"
+            android:gravity="center"
+            android:text="@string/Share_cancel"
+            skin:enable="true" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_ok_style"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_comm_dialog_ok"
+            android:gravity="center"
+            android:text="@string/Share_certain"
+            skin:enable="true" />
+    </LinearLayout>
+
+</LinearLayout>

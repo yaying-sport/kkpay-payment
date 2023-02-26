@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="315dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/white">
+
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="507dp"
+        app:hl_cornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="507dp"
+            android:orientation="vertical"
+            skin:enable="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_msg_notice_head">
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="注册须知"
+                    android:textColor="@color/shape_dialog_notice_registr_title_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    skin:enable="true" />
+
+            </FrameLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:scrollbarThumbVertical="@drawable/layer_recycle_scrollbar2"
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/shape_dialog_notice_registr_text_color"
+                    android:textSize="14dp"
+                    skin:enable="true"
+                    tools:text="fdsfsddfdfdfdfdfdfdfdfddfdfdvfovfjfvjnfkvfnvnfkjdfdfdfsdfsd" />
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                android:id="@+id/sl_ok"
+                android:layout_width="140dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:clickable="false"
+                app:hl_bindTextView="@id/tv_confirm_text"
+                app:hl_cornerRadius="23dp"
+                app:hl_layoutBackground="@drawable/shape_click_btn_bg"
+                app:hl_layoutBackground_clickFalse="@drawable/shape_click_btn_bg_click_false"
+                app:hl_layoutBackground_true="@drawable/shape_click_btn_bg_true"
+                app:hl_textColor="@color/click_btn_confirm"
+                app:hl_textColor_true="@color/click_btn_confirm_true">
+
+                <TextView
+                    android:id="@+id/tv_confirm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    skin:enable="true" />
+
+            </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+        </LinearLayout>
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+</LinearLayout>

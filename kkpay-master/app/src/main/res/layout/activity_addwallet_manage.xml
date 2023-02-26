@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/comm_line2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/activity_bg"
+            android:orientation="vertical">
+
+            <com.kaiserkalep.widgets.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="选择收款方式"
+                android:textColor="@color/wallet_title_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_wechat_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/view_title_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_wechat"
+                    style="@style/CheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icon_wechat_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/Wechat_name"
+                    android:textColor="@color/wallet_title_color"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/login_Line_Style"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_alipay_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/view_title_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_alipay"
+                    style="@style/CheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icon_aliba_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/Alipay_name"
+                    android:textColor="@color/wallet_title_color"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/login_Line_Style"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_bank_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/view_title_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_bank"
+                    style="@style/CheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icon_bank_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/Bank_name"
+                    android:textColor="@color/wallet_title_color"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/login_Line_Style"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <com.kaiserkalep.widgets.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="填充信息"
+                android:textColor="@color/wallet_title_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/face_idcard_name"
+                    android:textColor="@color/wallet_detauked_color"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/tv_read_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    tools:text="XXXX" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/login_Line_Style"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_pay_account_view"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_pay_account_tip"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/wallet_detauked_color"
+                    android:textSize="11dp"
+                    tools:text="@string/wallet_alipay_title" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.kaiserkalep.widgets.CleanEditTextView
+                        android:id="@+id/et_pay_account"
+                        style="@style/login_Edit_Style"
+                        android:layout_marginStart="15dp"
+                        android:digits="@string/add_ali_bank_account_type_digits"
+                        android:hint="@string/wallet_edit_input_alipay"
+                        android:inputType="text"
+                        android:maxLength="31"
+                        android:maxLines="1"
+                        android:textColor="@color/wallet_detauked_color"
+                        android:visibility="gone" />
+
+                    <com.kaiserkalep.widgets.CleanEditTextView
+                        android:id="@+id/et_bank_account"
+                        style="@style/login_Edit_Style"
+                        android:layout_marginStart="15dp"
+                        android:hint="@string/wallet_edit_input_bank"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:maxLines="1"
+                        android:textColor="@color/wallet_detauked_color"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <View
+                style="@style/login_Line_Style"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:id="@+id/tv_upload_type_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/wallet_upload_Receipt_Code"
+                android:textColor="@color/wallet_detauked_color"
+                android:textSize="11dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_qrcode"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/shape_addwallet_bg_line">
+
+                    <ImageView
+                        android:id="@+id/iv_sfzrear_add_tip"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_face_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_sfzrear_add_tip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/wallet_upload_my_Receipt_Code"
+                        android:textColor="@color/wallet_title_color"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_upload_rear"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_add_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_addwallet_bg_line"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_now_bank"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:paddingStart="23dp"
+                        android:paddingEnd="23dp"
+                        android:text="@string/wallet_choose_bank"
+                        android:textColor="@color/wallet_title_color"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_his_select_down" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="45dp"
+                    android:gravity="center"
+                    android:text="@string/wallet_add_pay_tip"
+                    android:textColor="@color/wallet_remind_color"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="100dp">
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:id="@+id/btn_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="40dp"
+                    app:clickable="false"
+                    app:hl_bindTextView="@id/tv_text"
+                    app:hl_clickable_text="true"
+                    app:hl_cornerRadius="23dp"
+                    app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+                    app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+                    app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+                    app:hl_textColor="@color/btn_confirm"
+                    app:hl_textColor_true="@color/btn_confirm_true">
+
+                    <TextView
+                        android:id="@+id/tv_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/Share_add"
+                        android:textSize="15dp" />
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

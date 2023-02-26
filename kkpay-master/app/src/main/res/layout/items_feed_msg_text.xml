@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:textColor="@color/order_details_adapter_time_tip"
+        android:textSize="10dp"
+        tools:text="2022-03-04 14:56:53" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="15dp"
+            android:visibility="invisible"
+            tools:background="@drawable/icon_default_photo" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="4dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/order_details_m_tip"
+            android:textColorLink="@color/no_color"
+            android:textSize="14dp"
+            tools:ignore="RtlSymmetry"
+            tools:text="12345678sdfghjkl;lkjhgfdgfdsdfghjkllkjhgfdsdfghjkllk0" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

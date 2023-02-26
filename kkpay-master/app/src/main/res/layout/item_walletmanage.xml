@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.kaiserkalep.widgets.shadowLayout.TouchShadowLayout
+        android:id="@+id/sl_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        app:hl_cornerRadius="5dp"
+        app:hl_shadowColor="@color/shadow_layout_color"
+        app:hl_shadowLimit="5dp"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    app:hl_cornerRadius="20dp"
+                    app:hl_layoutBackground="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center" />
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <com.kaiserkalep.widgets.BoldTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        tools:text="微信" />
+
+                    <TextView
+                        android:id="@+id/tv_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:alpha="0.6"
+                        android:gravity="start"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        tools:text="哆啦梦" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_click_delete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:src="@drawable/wallet_delete"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+    </com.kaiserkalep.widgets.shadowLayout.TouchShadowLayout>
+
+</LinearLayout>

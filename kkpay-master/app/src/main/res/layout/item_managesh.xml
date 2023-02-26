@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        android:id="@+id/sl_content"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        app:hl_cornerRadius="5dp"
+        app:hl_layoutBackground="@color/no_color"
+        app:hl_shadowColor="@color/shadow_layout_color"
+        app:hl_shadowLimit="3dp"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/rl_content_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                android:id="@+id/sl_view"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="22dp"
+                app:hl_cornerRadius="20dp"
+                app:hl_layoutBackground="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center" />
+
+            </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="5dp">
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    tools:text="XX体育" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/tv_more_url"
+                        android:alpha="0.6"
+                        android:orientation="horizontal"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_wallet_address_tip"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:text=":"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/tv_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            tools:text="xxxx" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_more_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.69"
+                        android:autoLink="all"
+                        android:gravity="center"
+                        android:paddingStart="17dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="17dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/Share_MoreUrl"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+</LinearLayout>

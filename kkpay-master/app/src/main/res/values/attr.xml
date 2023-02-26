@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="MyMaxHeightScrollView">
+        <attr name="my_max_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CleanEditTextView">
+        <attr name="clear_src_id" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <!-- 描边宽度-->
+        <attr name="border_width" format="dimension"/>
+        <!-- 描边颜色-->
+        <attr name="border_color" format="color"/>
+        <!--圆角大小-->
+        <attr name="corner_radius" format="dimension"/>
+        <!--左上圆角大小-->
+        <attr name="leftTop_corner_radius" format="dimension"/>
+        <!--右上圆角大小-->
+        <attr name="rightTop_corner_radius" format="dimension"/>
+        <!--左下圆角大小-->
+        <attr name="leftBottom_corner_radius" format="dimension"/>
+        <!--右下圆角大小-->
+        <attr name="rightBottom_corner_radius" format="dimension"/>
+        <!--图片类型：圆角或者圆形-->
+        <attr name="type" format="enum">
+            <enum name="oval" value="2"/>
+            <enum name="round" value="1"/>
+            <enum name="circle" value="0"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="pickerview">
+        <attr name="wheelview_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="wheelview_textSize" format="dimension" />
+        <attr name="wheelview_textColorOut" format="color" />
+        <attr name="wheelview_textColorCenter" format="color" />
+        <attr name="wheelview_dividerColor" format="color" />
+        <attr name="wheelview_lineSpacingMultiplier" format="float" />
+        <attr name="wheelview_divider" format="boolean" />
+        <attr name="wheelview_need_zero" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout">
+        <!-- 1、关于阴影 -->
+        <!--阴影：是否要显示阴影，可能有只想用shape和selector功能，不想要阴影-->
+        <attr format="boolean" name="hl_shadowHidden"/>
+        <!--阴影：阴影颜色-->
+        <attr format="color" name="hl_shadowColor"/>
+        <!--阴影：阴影的扩散范围(也可以理解为扩散程度)-->
+        <attr format="dimension" name="hl_shadowLimit"/>
+        <!--控件区域是否对称，默认是对称。不对称的话，那么控件区域随着阴影区域走-->
+        <attr format="boolean" name="hl_shadowSymmetry"/>
+        <!--阴影：x轴的偏移量-->
+        <attr format="dimension" name="hl_shadowOffsetX"/>
+        <!--阴影：y轴的偏移量-->
+        <attr format="dimension" name="hl_shadowOffsetY"/>
+        <!--阴影：左边是否隐藏阴影-->
+        <attr format="boolean" name="hl_shadowHiddenLeft"/>
+        <!--阴影：右边是否隐藏阴影-->
+        <attr format="boolean" name="hl_shadowHiddenRight"/>
+        <!--阴影：上边是否隐藏阴影-->
+        <attr format="boolean" name="hl_shadowHiddenTop"/>
+        <!--阴影：下面是否隐藏阴影-->
+        <attr format="boolean" name="hl_shadowHiddenBottom"/>
+
+
+        <!-- 2、关于圆角 -->
+        <!--圆角：统一大小，其中包括了阴影，shape、背景图、stroke边框圆角-->
+        <attr format="dimension" name="hl_cornerRadius"/>
+        <!--圆角：左上圆角。设置后会忽略hl_cornerRadius的值-->
+        <attr format="dimension" name="hl_cornerRadius_leftTop"/>
+        <!--圆角：右上圆角。同上-->
+        <attr format="dimension" name="hl_cornerRadius_rightTop"/>
+        <!--圆角：左下圆角。同上-->
+        <attr format="dimension" name="hl_cornerRadius_leftBottom"/>
+        <!--圆角：右下圆角。同上-->
+        <attr format="dimension" name="hl_cornerRadius_rightBottom"/>
+
+
+        <!-- 3、关于shape及selector -->
+        <!-- shape及selector样式：pressed、sectored -->
+        <attr name="hl_shapeMode">
+            <enum name="pressed" value="1"/>
+            <enum name="selected" value="2"/>
+            <enum name="ripple" value="3"/>
+        </attr>
+
+        <!-- 为false的默认背景，可单独使用-->
+        <attr format="reference|color" name="hl_layoutBackground"/>
+        <!-- 为true的默认背景，必须搭配hl_layoutBackground属性使用。否则报错-->
+        <attr format="reference|color" name="hl_layoutBackground_true"/>
+
+        <!-- stroke样式，stroke的宽度-->
+        <attr format="dimension" name="hl_strokeWith"/>
+        <!-- 为false时，默认的stoke颜色值，可单独使用-->
+        <attr format="color" name="hl_strokeColor"/>
+        <!-- 为true时，默认的stoke颜色值，必须搭配hl_strokeColor属性使用。否则报错-->
+        <attr format="color" name="hl_strokeColor_true"/>
+
+
+        <!-- 这里最终舍弃了系统clickable的方案，因为系统系统主动设置setOnClickListener后，会主动设置成true,所以这里采用自定义 -->
+        <attr format="boolean" name="clickable"/>
+        <!-- hl_clickable为false时，要展示的图片或颜色-->
+        <attr format="reference|color" name="hl_layoutBackground_clickFalse"/>
+
+
+        <!-- 4、关于填充的渐变色 -->
+        <!-- 要知道，如果设置了渐变色。那么将以渐变色为主。hl_layoutBackground属性将无效 -->
+        <!-- 渐变的起始颜色 -->
+        <attr format="color" name="hl_startColor"/>
+        <!-- 渐变的中间颜色 -->
+        <attr format="color" name="hl_centerColor"/>
+        <!-- 渐变的终止颜色 -->
+        <attr format="color" name="hl_endColor"/>
+        <!-- 渐变角度，默认值为0-->
+        <attr format="integer" name="hl_angle"/>
+
+
+        <!-- 5、绑定一个TextView，在点击按钮时，有可能有颜色变化 -->
+        <attr format="reference" name="hl_bindTextView"/>
+        <attr format="color" name="hl_textColor"/>
+        <attr format="color" name="hl_textColor_true"/>
+        <attr format="string" name="hl_text"/>
+        <attr format="string" name="hl_text_true"/>
+        <attr format="boolean" name="hl_clickable_text"/>
+    </declare-styleable>
+
+    <declare-styleable name="FillBlankView">
+        <attr name="blankNum" format="integer"/>
+        <attr name="blankSpace" format="dimension|reference"/>
+        <attr name="blankSolidColor" format="color|reference"/>
+        <attr name="blankStrokeColor" format="color|reference"/>
+        <attr name="blankStrokeWidth" format="dimension|reference"/>
+        <attr name="blankCornerRadius" format="dimension|reference"/>
+        <attr name="blankFocusedStrokeColor" format="color|reference"/>
+        <attr name="isPasswordMode" format="boolean"/>
+        <attr name="dotSize" format="dimension|reference"/>
+        <attr name="dotColor" format="color|reference"/>
+        <attr name="textMatchedColor" format="color|reference"/>
+        <attr name="textNotMatchedColor" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawableBottom" format="reference"/>
+        <attr name="drawableRight" format="reference"/>
+        <attr name="drawableTop" format="reference"/>
+        <attr name="drawableWidth" format="dimension"/>
+        <attr name="drawableHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorSeekBar">
+        //seekBar
+        <attr name="isb_max" format="float" /><!-- the max value of seekBar to seek, default 100-->
+        <attr name="isb_min" format="float" /><!-- the min value of seekBar to seek, default 0 -->
+        <attr name="isb_progress" format="float" /><!-- the current progress value of seekBar, default 0-->
+        <attr name="isb_progress_value_float" format="boolean" /><!--set the value of seekBar to float type, default false-->
+        <attr name="isb_seek_smoothly" format="boolean" /><!--true to seek smoothly when has ticks, default false-->
+        <attr name="isb_r2l" format="boolean" /><!--compat app local change,like arabic local, default false-->
+        <attr name="isb_ticks_count" format="integer" /><!--seekBar's ticks count, default zero-->
+        <attr name="isb_user_seekable" format="boolean" /><!--prevent user from seeking,only can be change thumb location by setProgress(), default false-->
+        <attr name="isb_clear_default_padding" format="boolean" /><!-- set seekBar's leftPadding&rightPadding to zero, default false, default padding is 16dp-->
+        <attr name="isb_only_thumb_draggable" format="boolean" /><!--user change the thumb's location by touching thumb/touching track,true for touching track to seek. false for touching thumb; default false-->
+        //indicator
+        <attr name="isb_show_indicator"><!-- the type of indicator, default rectangle_rounded_corner/0.-->
+            <enum name="none" value="0" />
+            <enum name="circular_bubble" value="1" />
+            <enum name="rounded_rectangle" value="2" />
+            <enum name="rectangle" value="3" />
+            <enum name="custom" value="4" /><!--choose custom type that you can set the custom indicator layout you want.-->
+        </attr>
+        <attr name="isb_indicator_color" format="color|reference" /><!-- indicator's color, default #FF4081-->
+        <attr name="isb_indicator_text_color" format="color|reference" /><!-- indicator's text color, default #FF4081 -->
+        <attr name="isb_indicator_text_size" format="dimension|reference" /><!-- indicator's text size, default 14sp-->
+        <attr name="isb_indicator_content_layout" format="reference" /><!-- when you set indicator type to custom , you can set ths indicator layout you want-->
+        <attr name="isb_indicator_top_content_layout" format="reference" /> <!--set the indicator's top view you want, not impact arrow , effect on indicator type : rectangle or rectangle_rounded_corner-->
+        //track
+        <attr name="isb_track_background_size" format="dimension|reference" /><!-- set indicatorSeekBar's track background bar size, default 2dp-->
+        <attr name="isb_track_background_color" format="color|reference" /><!-- set indicatorSeekBar's track background bar color, default #D7D7D7-->
+        <attr name="isb_track_progress_size" format="dimension|reference" /><!-- set indicatorSeekBar's track progress bar size, default 2dp-->
+        <attr name="isb_track_progress_color" format="color|reference" /><!-- set indicatorSeekBar's track progress bar color, default #FF4081-->
+        <attr name="isb_track_rounded_corners" format="boolean" /><!-- set the track's both ends' shape to round-->
+        //thumb text
+        <attr name="isb_thumb_text_color" format="color|reference" /><!--set thumb's color, default #FF4081-->
+        <attr name="isb_show_thumb_text" format="boolean" /><!--show thumb text or not, default false-->
+        //thumb
+        <attr name="isb_thumb_size" format="dimension|reference" /><!--set thumb's size, default 14dp, thumb size will be limited in 30dp-->
+        <attr name="isb_thumb_color" format="color|reference" /><!--set thumb's color, default #FF4081-->
+        <attr name="isb_thumb_drawable" format="reference" /><!--set custom thumb's drawable you want,thumb size will be limited in 30dp, if drawable less than 30dp ,will show in intrinsic size -->
+        <attr name="isb_thumb_adjust_auto" format="boolean" /><!--set the thumb move to the closed tick after touched up, default true-->
+        //tickMarks
+        <attr name="isb_tick_marks_color" format="color|reference" /><!--set tick's color, default #FF4081-->
+        <attr name="isb_tick_marks_size" format="dimension|reference" /><!--set the tick width, default 10dp,custom drawable will be limited in 30dp, if less than 30dp ,will show in intrinsic size-->
+        <attr name="isb_tick_marks_drawable" format="reference" /><!--set custom tick's drawable you want, custom drawable will be limited in 30dp, if less than 30dp ,will show in intrinsic size-->
+        <attr name="isb_tick_marks_ends_hide" format="boolean" /><!--hide 2 ticks on the seekBar's both ends, default false-->
+        <attr name="isb_tick_marks_swept_hide" format="boolean" /><!--hide the ticks on the seekBar's thumb left, default false-->
+        <attr name="isb_show_tick_marks_type"><!--select the tick shape type, default not show： NONE/0-->
+            <enum name="none" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="square" value="2" />
+            <enum name="divider" value="3" /> <!--show tickMarks shape as vertical line , line'size is 1 dp.-->
+        </attr>
+        //tickTexts
+        <attr name="isb_show_tick_texts" format="boolean" /><!--show the text below tick or not, default false-->
+        <attr name="isb_tick_texts_color" format="reference|color" /><!--set texts' color, default #FF4081-->
+        <attr name="isb_tick_texts_size" format="dimension|reference" /><!--set the text size of tick below text, default 13sp-->
+        <attr name="isb_tick_texts_array" format="reference" /><!--set the custom texts below tick to replace default progress text, default null-->
+        <attr name="isb_tick_texts_typeface"><!--select the typeface for tick texts/thumb text, default normal-->
+            <enum name="normal" value="0" />
+            <enum name="monospace" value="1" />
+            <enum name="sans" value="2" />
+            <enum name="serif" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MyMaxHeightRecyclerView">
+        <attr name="my_rv_max_height" format="dimension" />
+    </declare-styleable>
+
+</resources>

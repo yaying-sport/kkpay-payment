@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--system-->
+    <!--    <string name="scheme">yyapp</string>-->
+    <string name="action">android.intent.action.VIEW</string>
+    <string name="category">android.intent.category.DEFAULT</string>
+    <string name="loginTag">isNeedLogin</string>
+    <string name="thisHost">thisHost</string>
+    <string name="nextHost">nextHost</string>
+    <string name="jsonBundle">jsonBundle</string>
+    <string name="thisUrl">thisHostUrl</string>
+    <string name="nextUrl">nextHostUrl</string>
+    <!--system-->
+    <!--首页-->
+    <string name="MainActivity">main</string>
+    <!--启动页-->
+    <string name="StartActivity">start</string>
+    <!--通用 webView-->
+    <string name="WebViewActivity">webView</string>
+    <!--登录-->
+    <string name="LoginActivity">login</string>
+    <!--设备效验-->
+    <string name="VerifyNewActivity">verifynew</string>
+    <!--注册-->
+    <string name="RegisterActivity">register</string>
+    <!--设置-->
+    <string name="SettingActivity">setting</string>
+    <!--找回登录密码-->
+    <string name="FindPasswordActivity">findPassword</string>
+    <!--消息通知公告-->
+    <string name="MessageNotifyActivity">messageNotify</string>
+    <!--消息/公告详情-->
+    <string name="MessageNotifyDetailActivity">messageNotifyDetail</string>
+    <!--修改登录密码-->
+    <string name="ModifyLoginPassActivity">modifyloginpassactivity</string>
+    <!--修改支付密码-->
+    <string name="ModifyPayPassActivity">modifypaypassactivity</string>
+    <!--意见反馈-->
+    <string name="FeedbackActivity">feedbackactivity</string>
+    <!--我的反馈-->
+    <string name="MyFeedbackActivity">myfeedbackactivity</string>
+    <!--反馈详情-->
+    <string name="FeedBackDetailActivity">feedbackdetailactivity</string>
+    <!--实名认证-->
+    <string name="VerifyFaceActivity">verifyfaceactivity</string>
+    <!--添加收付款-->
+    <string name="AddWalletManageActivity">addwalletmanageactivity</string>
+    <!--收付款管理-->
+    <string name="WalletManageActivity">walletmanageactivity</string>
+    <!--买币中心-->
+    <string name="BuyCoinCenterActivity">buycoincenteractivity</string>
+    <!--买币页面-->
+    <string name="BuyCoinActivity">buycoinactivity</string>
+    <!--卖币中心-->
+    <string name="SellCoinCenterActivity">sellcoincenteractivity</string>
+    <!--卖币完成-->
+    <string name="SellCoinDetailsActivity">sellcoindetailsactivity</string>
+    <!--我的订单-->
+    <string name="MyOrderActivity">myorderactivity</string>
+    <!--钱包记录-->
+    <string name="WalletRecordActivity">walletrecordactivity</string>
+    <!--钱包记录详情-->
+    <string name="WalletRecordDetailsActivity">walletrecorddetailsactivity</string>
+    <!--订单详情-->
+    <string name="OrderDetailsActivity">orderdetailsactivity</string>
+    <!--查看图片-->
+    <string name="PhotoDetailActivity">photodetailactivity</string>
+    <!--客服中心-->
+    <string name="ServiceActivity">serviceactivity</string>
+    <!--关于我们-->
+    <string name="AboutActivity">aboutactivity</string>
+    <!--商户存款-->
+    <string name="DepositShactivity">depositshactivity</string>
+    <!--商户管理-->
+    <string name="ManageShactivity">manageshactivity</string>
+    <!--添加商户-->
+    <string name="AddManageShActivity">addmanageshactivity</string>
+    <!--设置玩家账号-->
+    <string name="AddShAcountDetailActivity">addshacountdetailactivity</string>
+    <!--商户管理 (单一商户)-->
+    <string name="ManageShSettingActivity">manageshsettingactivity</string>
+    <!--商户通讯录-->
+    <string name="MerchantDirectoryActivity">merchantdirectoryactivity</string>
+    <!--玩家通讯录-->
+    <string name="PlayerAddressActivity">playeraddressactivity</string>
+
+    <!--二维码扫码-->
+    <string name="CameraCaptureActivity">cameracaptureactivity</string>
+    <!--二维码扫码详情-->
+    <string name="ScanDetailActivity">scandetailactivity</string>
+    <!--二维码扫码详情-->
+    <string name="ScanBindActivity">scanBind</string>
+    <!--编辑用户信息-->
+    <string name="EditorUserDataActivity">editoruserdata</string>
+
+</resources>

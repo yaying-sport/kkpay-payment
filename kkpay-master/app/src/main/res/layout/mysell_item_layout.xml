@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kaiserkalep.widgets.shadowLayout.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    app:hl_cornerRadius="3dp"
+    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+    app:hl_shadowColor="@color/home_shadowColor"
+    app:hl_shadowLimit="3dp"
+    app:hl_shadowOffsetY="1dp">
+
+    <LinearLayout
+        android:id="@+id/ll_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:textColor="@color/home_mysell_item_text"
+                    android:textSize="17dp"
+                    tools:text="10.0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:text="@string/home_wallet_tip"
+                    android:textColor="@color/home_mysell_item_text"
+                    android:textSize="10dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_item_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sale_item_date_time"
+                android:textSize="9dp"
+                tools:text="挂单时间：2022-01-15 19:11:0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.4"
+            android:gravity="end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="1dp"
+                android:textColor="@color/home_mysell_item_text"
+                android:textSize="12dp"
+                android:text="@string/home_nodata_guadanzhong" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/icon_mine_arrow_r" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+

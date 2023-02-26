@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/activity_bg"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_title" />
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_indicator"
+        android:background="@color/view_title_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/comm_line2" />
+
+    <com.kaiserkalep.widgets.ViewPagerFixed
+        android:id="@+id/view_page"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+</LinearLayout>

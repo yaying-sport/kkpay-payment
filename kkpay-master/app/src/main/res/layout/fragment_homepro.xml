@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kaiserkalep.widgets.MySmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_main_bg"
+    app:srlEnableLoadMore="false"
+    app:srlEnableNestedScrolling="true"
+    app:srlEnableOverScrollBounce="false"
+    app:srlEnableOverScrollDrag="false"
+    app:srlEnablePureScrollMode="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="165dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/bg_home_head" />
+
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:id="@+id/sl_user_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="3dp"
+                    app:hl_shadowOffsetY="1dp"
+                    tools:layout_marginTop="50dp">
+
+                    <include layout="@layout/home_top_user_card_layout" />
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_transaction_show_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/sl_user_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <include layout="@layout/home_transaction_show_view" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_quick_coin_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/ll_transaction_show_view"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="10dp">
+
+                    <Button
+                        android:id="@+id/btn_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_home_buy_btn_bg"
+                        android:text="@string/home_buy_btn"
+                        android:textColor="@color/home_buy_btn_text_color"
+                        android:textSize="19dp" />
+
+                    <Button
+                        android:id="@+id/btn_sell"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_home_sell_btn_bg"
+                        android:text="@string/home_sell_btn"
+                        android:textColor="@color/home_sell_btn_text_color"
+                        android:textSize="19dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_transaction_record_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/ll_quick_coin_view"
+                    android:layout_marginTop="20dp">
+
+                    <include layout="@layout/home_transaction_record_viewpro" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_guadan_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_transaction_record_view"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/home_rec_guadan"
+                    android:textColor="@color/home_rec_guad_tip"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_guad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_guadan_tip"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_rec_lookall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rec_guad"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="25dp"
+                    android:padding="10dp"
+                    android:visibility="invisible"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_item_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="1dp"
+                        android:text="@string/Share_lookall"
+                        android:textColor="@color/home_mysell_item_text"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="7dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/icon_mine_arrow_r" />
+
+                </LinearLayout>
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:id="@+id/rec_shadow_nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_mysell_minheight"
+                    android:layout_below="@+id/tv_guadan_tip"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_home_rec_guad_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="3dp"
+                    app:hl_shadowOffsetY="1dp"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_rec_nodata" />
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tv_statusbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/home_top_view_layoutpro" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_help_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_help_tutoria"
+                        android:layout_width="75dp"
+                        android:layout_height="38dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="78dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/icon_help_tutorial_pro"
+                        android:gravity="center"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="7dp"
+                        android:text="@string/home_top_help_tutorial"
+                        android:textColor="@color/white"
+                        android:textSize="8dp" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</com.kaiserkalep.widgets.MySmartRefreshLayout>
+
+
+
+

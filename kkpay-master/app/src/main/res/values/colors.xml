@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3260C9</color>
+    <color name="colorPrimaryDark">#3f4359</color>
+    <color name="colorAccent">#3260C9</color>
+
+    <color name="black_33">#333333</color>
+
+    <color name="gray_66">#666666</color>
+
+    <color name="blue1">#3160CC</color>
+
+    <color name="yellow1">#F7B500</color>
+
+    <color name="red1">#EB5641</color>
+
+    <color name="startWelcome">#3163CE</color>
+    <color name="addwallet_bg_line">#98AFE5</color>
+    <color name="view_check_bg">#1A5D8EFF</color>
+
+    <color name="loading_layout_text_color">#A5A9B2</color>
+    <color name="loading_layout_btn_color">#FFFFFF</color>
+    <color name="dialog_cancel_text_color">#FFFFFFFF</color>
+    <color name="comm_line">#99D8D8D8</color>
+    <color name="comm_line2">#FAFAFA</color>
+    <color name="comm_line3">#AAAAAA</color>
+    <color name="dialog_ok_text_color_pressed">#993F7FFF</color>
+    <color name="dialog_ok_text_color">#3F7FFF</color>
+    <color name="scrollbar_thumb_solid2">#A5A5A5</color>
+    <color name="scrollbar_thumb_stroke2">#A5A5A5</color>
+    <color name="retry_button_bg">#507EF6</color>
+    <color name="retry_button_bg_stroke">#507EF6</color>
+    <color name="progressbar_background_end">#00000000</color>
+    <color name="progressbar_background_start">#00000000</color>
+    <color name="progressbar_progress_start">#4C78EA</color>
+    <color name="progressbar_progress_end">#4C78EA</color>>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="comm_dialog_bg">#FFFFFF</color>
+    <color name="click_btn_bg_end">#3160CC</color>
+    <color name="click_btn_bg_start">#3160CC</color>
+    <color name="click_btn_bg_click_false_end">#A4BDF8</color>
+    <color name="click_btn_bg_click_false_start">#A4BDF8</color>
+    <color name="click_btn_bg_true_end">#994080FF</color>
+    <color name="click_btn_bg_true_start">#994080FF</color>
+    <color name="home_banner_def">#DDDDDD</color>
+    <color name="default_image_view">#ECF1F9</color>
+    <color name="edit_cursor_login">#FFFFFF</color>
+    <color name="service_top_bg_line_center">#00000000</color>
+    <color name="service_top_bg_line_end">#00000000</color>
+    <color name="service_top_bg_line_start">#00000000</color>
+    <color name="share_dialog_bg">#FFFFFF</color>
+    <color name="loading_bg">#CC000000</color>
+    <color name="share_dialog_text">#CCCCCC</color>
+    <color name="share_dialog_cancel">#FFFFFF</color>
+    <color name="comm_dialog_title">#323232</color>
+    <color name="click_btn_confirm">#80FFFFFF</color>
+    <color name="click_btn_confirm_true">#FFFFFF</color>
+    <color name="loading_dialog">#FFFFFF</color>
+    <color name="simple_dialog_title">#333333</color>
+    <color name="simple_dialog_line">#F2F2F2</color>
+    <color name="shape_dialog_notice_title">#333333</color>
+    <color name="shape_dialog_notice_msg">#A5A9B2</color>
+    <color name="share_dialog_line">#333333</color>
+    <color name="comm_dialog_text">#666666</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_bgColor_overlay">#60000000</color>
+    <color name="view_title_bg">#FFFFFF</color>
+    <color name="add_bank_title">#333333</color>
+    <color name="add_address_input">#333333</color>
+    <color name="add_address_input_hint">#A5A9B2</color>
+    <color name="send_code_text_enabled">#FFFFFF</color>
+    <color name="send_code_text_unenabled">#FFFFFF</color>
+    <color name="select_birthday_title_bg">#f2f2f2</color>
+    <color name="view_select_back_cacal">#507EF6</color>
+    <color name="select_birthday_line">#FFFFFF</color>
+    <color name="select_birthday_center">#666666</color>
+    <color name="select_birthday_out">#999999</color>
+    <color name="select_record_center">#686B76</color>
+    <color name="select_record_out">#BDBFC3</color>
+    <color name="pick_time_cancel_bg">#F4F8FD</color>
+    <color name="pick_time_cancel_text">#507EF6</color>
+    <color name="pick_time_confirm_bg">#507EF6</color>
+    <color name="pick_time_confirm_text">#FFFFFF</color>
+    <color name="view_title_back">#101A25</color>
+    <color name="view_title_title">#101A25</color>
+    <color name="view_title_function">#101A25</color>
+    <color name="comm_title_line">#FFFFFF</color>
+    <color name="prompt_warning">#F75064</color>
+    <color name="view_web_view_tab">#222222</color>
+    <color name="msg_edit_bg">#EEEEEE</color>
+    <color name="select_birthday_bg">#FFFFFF</color>
+
+
+    <!--************************************************************************-->
+
+
+    <color name="activity_bg">#FFFFFF</color>
+    <color name="home_main_bg">#F8F8F8</color>
+    <color name="servicee_main_bg">#F8F8F8</color>
+    <color name="view_bg">#F8F8F8</color>
+    <color name="status_bar_color">#FFFFFF</color>
+    <color name="smart_refresh_layout">#CCCCCC</color>
+    <color name="classics_footer">#A5A5A5</color>
+    <color name="toast_bg">#99000000</color>
+    <color name="toast_text">#FFFFFF</color>
+    <color name="passpay_text_color">#101A25</color>
+    <!--////////////////////////////////////-->
+    <color name="no_color">#00000000</color>r>
+    <color name="main_tab_shadow_start">#00000000</color>
+    <color name="main_tab_shadow_end">#00000000</color>
+    <color name="rec_top_shadow_start">#40666666</color>
+    <color name="rec_top_shadow_center">#26666666</color>
+    <color name="rec_top_shadow_end">#0D666666</color>
+    <color name="main_tab_select">#3160CC</color>
+    <color name="main_tab_unselect">#BDC2CE</color>
+    <color name="unread_message_dot">#FF453A</color>
+    <color name="start_time_bg">#80000000</color>
+    <color name="start_time">#FFFFFFFF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_half">#80FFFFFF</color>
+    <color name="white_seven">#B3FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="default_shadow_color">#2a000000</color>
+    <color name="default_shadowback_color">#fff</color>
+    <color name="VerCode_text_color">#FFFFFF</color>
+    <color name="edit_cursor">#507EF6</color>
+    <color name="send_code_bg_enabled">#3F7FFF</color>
+    <color name="bule_enabled_half">#803F7FFF</color>
+    <color name="send_code_bg_unenabled">#A4BDF8</color>
+    <color name="safety_passpay_bg">#FFFFFF</color>
+    <color name="safety_passpay_stroke">#777C89</color>
+    <color name="prompt_success">#EEF1F8</color>
+    <color name="slider_bg_out">#EEF1F8</color>
+    <color name="slider_bg_text">#B7BCD1</color>
+    <color name="slider_pr_bg">#CC85B0FD</color>
+    <color name="slider_text_status_fail">#FFFFFF</color>
+    <color name="slider_text_status_succeed">#28A03B</color>
+    <color name="prompt_error">#F75064</color>
+
+    <color name="edition_update_version_name">#FFFFFF</color>
+    <color name="edition_update_bg">#FFFFFF</color>
+    <color name="edition_update_content_title">#424654</color>
+    <color name="scrollbar_thumb_solid">#A5A5A5</color>
+    <color name="scrollbar_thumb_stroke">#A5A5A5</color>
+    <color name="edition_update_content_text">#A5A9B2</color>
+    <color name="edition_update_progress_bg">#D5DBE6</color>
+    <color name="edition_update_progress_bg_start">#8ab7ed</color>
+    <color name="edition_update_progress_bg_end">#5995ea</color>
+    <color name="edition_update_progress_value">#FFFFFF</color>
+    <color name="edition_update_cancel">#A5A9B2</color>
+    <color name="updata_dialog_servse_normal_textcolor">#89858A</color>
+    <color name="updata_dialog_servse_intent_textcolor">#507EF6</color>
+    <color name="shape_dialog_notice_registr_text_color">#333333</color>
+    <color name="shape_dialog_notice_registr_title_color">#333333</color>
+    <color name="notice_no_tip_remember">#D5D5D5</color>
+    <color name="notice_important_title">#333333</color>
+    <color name="notice_important_text">#A5A9B2</color>
+
+    <color name="btn_confirm">#FFFFFF</color>
+    <color name="btn_confirm_true">#FFFFFF</color>
+    <color name="home_shadowColor">#1A000000</color>
+    <color name="shadow_layout_color">#000000</color>
+
+    <!--LoginActivity / RegisterActivity 页面-->
+    <color name="text_AppName">#666666</color>
+    <color name="line_bg">#DCDDE1</color>
+    <color name="edit_text_hint_color">#777C89</color>
+    <color name="login_btn_bg_start">#3160CC</color>
+    <color name="login_btn_bg_end">#3160CC</color>
+    <color name="login_btn_bg_true_start">#3160CC</color>
+    <color name="login_btn_bg_true_end">#3160CC</color>
+    <color name="login_btn_bg_click_false_start">#803160CC</color>
+    <color name="login_btn_bg_click_false_end">#803160CC</color>
+
+    <color name="red_btn_bg_start">#C42E2E</color>
+    <color name="red_btn_bg_end">#C42E2E</color>
+    <color name="red_btn_bg_true_start">#C42E2E</color>
+    <color name="red_btn_bg_true_end">#C42E2E</color>
+    <color name="red_btn_bg_click_false_start">#80C42E2E</color>
+    <color name="red_btn_bg_click_false_end">#80C42E2E</color>
+
+    <color name="version_text_color">#333333</color>
+    <color name="reg_btn_color">#3160CC</color>
+    <color name="verify_new_device_text_color">#333333</color>
+
+    <!--MainActivity / HomeFragment 页面-->
+    <color name="home_default_photo_bg">#F8F8F8</color>
+    <color name="home_welcome_userid">#333333</color>
+    <color name="home_Wallet_Type">#1D7AEF</color>
+    <color name="home_Wallet_address_bg">#F3F2F7</color>
+    <color name="home_Wallet_address_text_color">#666666</color>
+    <color name="home_transactionShow_text_tip">#666666</color>
+    <color name="home_transactionShow_text_num_tip">#333333</color>
+    <color name="home_mysell_item_text">#333333</color>
+    <color name="home_buy_btn_bg">#F77858</color>
+    <color name="home_buy_btn_text_color">#FFFFFF</color>
+    <color name="home_sell_btn_bg">#0DB090</color>
+    <color name="home_sell_btn_text_color">#FFFFFF</color>
+    <color name="home_transactionRcord_text_tip">#333333</color>
+    <color name="home_rec_guad_tip">#333333</color>
+    <color name="home_rec_guad_bg">#FAFAFA</color>
+    <!--MainActivity / SaleFragment 页面-->
+    <color name="service_top_bg">#00000000</color>
+    <color name="service_title">#333333</color>
+    <color name="service_title_sec">#bbc1cb</color>
+    <color name="view_title_title_service">#FFFFFF</color>
+    <color name="view_title_function_service">#FFFFFF</color>
+    <color name="sale_title">#101A25</color>
+    <color name="sale_top_bg">#FFFFFF</color>
+    <color name="sale_indicator_bg">#FFFFFF</color>
+    <color name="rr_navigator_normal">#A8A8B2</color>
+    <color name="rr_navigator_select">#1575E1</color>
+    <color name="sale_item_id_money_textcolor">#333333</color>
+    <color name="sale_item_state_jx_bg">#5E8FFF</color>
+    <color name="sale_item_state_wc_bg">#E59302</color>
+    <color name="sale_item_state_zt_bg">#E61313</color>
+    <color name="dark_grey">#565B68</color>
+    <color name="dark_grey_half">#80565B68</color>
+    <color name="dark_green">#00908C</color>
+    <color name="dark_green_half">#8000908C</color>
+    <color name="sale_item_state">#FFFFFF</color>
+    <color name="sale_item_date_time">#AAAAAA</color>
+    <color name="sale_item_date_order">#666666</color>
+    <color name="sale_item_money">#333333</color>
+    <color name="msg_item_bg">#FFFFFF</color>
+    <color name="msg_item_line">#EEEEEE</color>
+    <color name="msg_item_content">#9198AD</color>
+    <color name="msg_item_title">#333333</color>
+    <color name="msg_item_time">#666666</color>
+    <color name="msg_list_bg">#FFFFFF</color>
+    <color name="msg_detail_time">#A6AAB3</color>
+    <color name="msg_detail_content">#424654</color>
+    <color name="activity_message_notify_detail_line">#FAFAFA</color>
+    <color name="msg_detail_bg">#FFFFFF</color>
+    <color name="mine_nickname">#333333</color>
+    <color name="mine_llclick_title">#333333</color>
+    <color name="mine_Wallet_address_bg">#EEEEEE</color>
+    <color name="setting_item_list_text">#333333</color>
+    <color name="setting_version_num">#666666</color>
+    <color name="feedback_boxview_bg">#F9F9FB</color>
+    <color name="feedback_iamge_bg">#F2F3F7</color>
+    <color name="feedback_iamge_text_color">#777C89</color>
+    <color name="feedback_item_hint">#AAAAAA</color>
+    <color name="feedback_item_title">#333333</color>
+    <color name="editor_text_tip">#333333</color>
+    <color name="editor_edittext_hint_color">#80666666</color>
+    <color name="editor_text_grey_tip">#99666666</color>
+    <color name="shape_round_grey">#AAAAAA</color>
+    <color name="face_text_bold_color">#333333</color>
+    <color name="face_text_color">#666666</color>
+    <color name="face_fsz_bg">#F4F4F4</color>
+    <color name="wallet_title_color">#333333</color>
+    <color name="wallet_detauked_color">#666666</color>
+    <color name="wallet_remind_color">#DD0505</color>
+    <color name="select_bank_dialog_bg">#FFFFFF</color>
+    <color name="select_bank_list_name">#333333</color>
+    <color name="select_bank_dialog_line">#F8F8F8</color>
+    <color name="select_bank_list_title">#333333</color>
+    <color name="wallet_add_color">#333333</color>
+    <color name="wallet_add_tip_color">#a5a9b2</color>
+    <color name="order_state">#E61313</color>
+
+    <color name="buy_lie_type_tip">#666666</color>
+    <color name="buy_btn_bg_true_start">#F77858</color>
+    <color name="buy_btn_bg_true_end">#F77858</color>
+    <color name="buy_canSplit_true">#333333</color>
+    <color name="buy_canSplit_false">#B6BCCB</color>
+
+    <color name="sell_paytype_unselect_bg">#FFFFFF</color>
+    <color name="sell_paytype_select_bg">#FFFFFF</color>
+    <color name="sell_paytype_unselect_stroke">#EEEEEE</color>
+    <color name="sell_paytype_select_stroke">#A28AFF</color>
+    <color name="sell_paytype_unselect_text">#666666</color>
+    <color name="sell_paytype_select_text">#A28AFF</color>
+    <color name="wallet_record_out_text_color">#F46745</color>
+    <color name="sell_gd_details_bg">#F3F2F7</color>
+
+    <color name="buy_coin_dark_text_color">#333333</color>
+
+    <color name="seekbar_background_bg">#D6DFF5</color>
+    <color name="seekbar_marks_color">#4D6E91E5</color>
+    <color name="seekbar_progress_color">#315FCE</color>
+
+
+    <color name="order_details_m_tip">#333333</color>
+    <color name="order_details_gs_tip">#666666</color>
+    <color name="order_details_adapter_time_tip">#99666666</color>
+    <color name="order_details_payMoney_tip">#B00808</color>
+
+    <color name="order_details_red">#C42E2E</color>
+    <color name="order_details_red_half">#80C42E2E</color>
+
+    <color name="photoview_backgroud">#1C1D1E</color>
+
+    <color name="scan_text_m_color">#333333</color>
+
+    <color name="dialog_coin_title_tip">#B00808</color>
+    <color name="dialog_coin_content_tip">#666666</color>
+
+    <color name="verify_success_content_color">#D1DBFF</color>
+
+    <color name="sh_balck_color">#000000</color>
+    <color name="sh_m_color">#333333</color>
+    <color name="sh_g_color">#666666</color>
+    <color name="sh_allmoney_color">#A3AFBB</color>
+    <color name="sh_hint_color">#A3AFBB</color>
+    <color name="add_sh_line">#CCCCCC</color>
+
+    <color name="llsh_scan_pressed">#1A666666</color>
+
+    <color name="md_indicator_bg">#FFFFFF</color>
+
+    <color name="Merchant_m_color">#333333</color>
+    <color name="Merchant_g_color">#9198AD</color>
+
+    <color name="tomore_bg_start_color">#4264FF</color>
+    <color name="tomore_bg_end_color">#0698FF</color>
+    <color name="addwj_dialog_stroke_bg">#CCD2DA</color>
+
+
+    <color name="web_link_color">#3f7eff</color>
+
+</resources>

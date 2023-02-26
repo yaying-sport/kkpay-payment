@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="307dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    skin:enable="true"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:background="@drawable/shape_bg_common_dialog"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                skin:enable="true"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/Share_Contact_Customer_Service"
+                android:textColor="@color/comm_dialog_title"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <ScrollView
+            skin:enable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarThumbVertical="@drawable/layer_recycle_scrollbar"
+            android:scrollbars="vertical">
+
+            <TextView
+                skin:enable="true"
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingBottom="15dp"
+                tools:text="2asasasasasasasasasasasaasasas34567"
+                android:textColor="@color/comm_dialog_text"
+                android:textSize="14dp" />
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.kaiserkalep.widgets.MyOnClickTextView
+            android:id="@+id/tv_cancel"
+            style="@style/dialog_cancel_text_color"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            skin:enable="true"
+            android:layout_height="36dp"
+            android:background="@drawable/select_comm_dialog_cancel"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="@string/Share_cancel" />
+
+
+        <!--android:background="@drawable/shape_commdialog_confirm"-->
+        <com.kaiserkalep.widgets.MyOnClickTextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_ok_style"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            skin:enable="true"
+            android:layout_height="36dp"
+            android:background="@drawable/select_comm_dialog_ok"
+            android:gravity="center"
+            android:text="@string/Share_submit" />
+    </LinearLayout>
+
+</LinearLayout>

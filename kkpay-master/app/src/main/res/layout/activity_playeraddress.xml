@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/comm_line2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ll_top_search_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_search_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/icon_search" />
+
+                <com.kaiserkalep.widgets.CleanEditTextView
+                    android:id="@+id/et_sh_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/no_color"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionSearch"
+                    android:lines="1"
+                    android:maxLength="30"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:singleLine="true"
+                    android:textSize="12dp"
+                    tools:hint="@string/depositsh_search_wj_name_tip" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.kaiserkalep.widgets.LoadingLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_top_search_parent"
+            app:isNowLoading="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/sh_g_color"
+                    android:textSize="10dp"
+                    tools:text="@string/player_text_tip" />
+
+                <com.kaiserkalep.widgets.MyRecycleView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:paddingTop="5dp" />
+
+            </LinearLayout>
+
+        </com.kaiserkalep.widgets.LoadingLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

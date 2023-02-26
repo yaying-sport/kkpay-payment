@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/view_title_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_edit_phone_layout"
+        style="@style/login_Edit_RelativeLayout_Style"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View style="@style/login_Line_Style" />
+
+        <ImageView
+            android:id="@+id/iv_find_phone_left"
+            style="@style/login_iv_left_Style"
+            android:src="@drawable/icon_phone_uncheck" />
+
+        <com.kaiserkalep.widgets.CleanEditTextView
+            android:id="@+id/et_phone"
+            style="@style/login_Edit_Style"
+            android:layout_toEndOf="@+id/iv_find_phone_left"
+            android:layout_toRightOf="@+id/iv_find_phone_left"
+            android:hint="@string/login_edit_input_phone"
+            android:inputType="number"
+            android:maxLength="13"
+            tools:ignore="TextFields" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_vercode_layout"
+        style="@style/login_Edit_RelativeLayout_Style">
+
+        <View style="@style/login_Line_Style" />
+
+        <ImageView
+            android:id="@+id/iv_vercode_left"
+            style="@style/login_iv_left_Style"
+            android:src="@drawable/icon_safety_uncheck" />
+
+        <com.kaiserkalep.widgets.CleanEditTextView
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toStartOf="@+id/btn_send_auth_code"
+            android:layout_toLeftOf="@+id/btn_send_auth_code"
+            android:layout_toEndOf="@+id/iv_vercode_left"
+            android:layout_toRightOf="@+id/iv_vercode_left"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/send_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:paddingTop="8dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:textColorHint="@color/edit_text_hint_color"
+            android:textCursorDrawable="@drawable/shape_edit_text_cursor"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_send_auth_code"
+            android:layout_width="75dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_send_code"
+            android:text="@string/get_verify_code"
+            android:textColor="@color/VerCode_text_color"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

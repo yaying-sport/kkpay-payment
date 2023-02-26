@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.kaiserkalep.widgets.BoldTextView
+        android:id="@+id/tv_title"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="公告标题"
+        android:textColor="@color/notice_important_title"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:lineSpacingExtra="3dp"
+        android:id="@+id/tv_content"
+        android:layout_marginBottom="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="尊敬的客户：2020年12月10日 最欧冠活活动正式启动，感谢您一如既往的支持，祝您
+生活愉快！感谢您的支持。祝您生活愉快！
+感谢您一如既往的支持，祝您生活愉快！"
+        android:textColor="@color/notice_important_text"
+        android:textSize="12dp"
+        android:autoLink="web"
+        android:textColorLink="@color/web_link_color"/>
+
+
+</LinearLayout>

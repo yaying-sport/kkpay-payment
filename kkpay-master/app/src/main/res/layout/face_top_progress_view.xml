@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="13dp"
+    android:layout_marginEnd="13dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_round_one"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_round_bule"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_text_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/face_upload_idcard"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_point_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_horizontal|top"
+        android:text="························" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_round_two"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_round_grey"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_text_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/face_identify"
+            android:textColor="@color/shape_round_grey"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_point_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_horizontal|top"
+        android:text="························" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_round_thr"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_round_grey"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_text_thr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="@string/face_manual_review"
+            android:textColor="@color/shape_round_grey"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

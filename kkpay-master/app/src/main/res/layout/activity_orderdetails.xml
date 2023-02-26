@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/bg_home_head" />
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:id="@+id/sl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="3dp"
+                    app:hl_shadowOffsetY="1dp"
+                    tools:layout_marginTop="50dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_statue_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="top|start"
+                            android:background="@drawable/shape_order_state_bg"
+                            android:gravity="center"
+                            android:minWidth="80dp"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            tools:text="商户下发入" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp">
+
+
+                            <com.kaiserkalep.widgets.BoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_vertical"
+                                android:layout_marginStart="21dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="@string/order_details_money_tip"
+                                android:textColor="@color/order_details_m_tip"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tv_isCanSell"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end|top"
+                                android:layout_marginEnd="21dp"
+                                tools:text="可售金额"
+                                tools:textColor="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tv_trade_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end|center_vertical"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="21dp"
+                                android:gravity="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="27dp"
+                                tools:text="+300.0" />
+
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/merchantName_RL"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <View style="@style/login_Line_Style" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="@string/merchant_name"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/merchantName_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="12dp"
+                    tools:text="213245645646545646546" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_yue_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <View style="@style/login_Line_Style" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="@string/order_details_trade_post_bal_tip"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="11dp" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_yue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:layout_toStartOf="@+id/tv_yue_tip"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    tools:text="300.0" />
+
+                <TextView
+                    android:id="@+id/tv_yue_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center"
+                    android:text="@string/home_wallet_tip"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="9dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_orderno_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <View style="@style/login_Line_Style" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="@string/order_details_trade_liushuino"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/tv_orderno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:layout_toStartOf="@+id/iv_orderno_copy_icon"
+                    android:gravity="center"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="12dp"
+                    tools:text="213245645646545646546" />
+
+                <ImageView
+                    android:id="@+id/iv_orderno_copy_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="4dp"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_home_copy" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <View style="@style/login_Line_Style" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="@string/order_details_trade_time_tip"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:gravity="center"
+                    android:textColor="@color/order_details_m_tip"
+                    android:textSize="12dp"
+                    tools:text="2022-01-08 16:19:22" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/tv_statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+        <include layout="@layout/top_other_view_layout" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="311dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    skin:enable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:background="@drawable/bg_game_status_head"
+        skin:enable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:gravity="center_vertical"
+            android:paddingTop="32dp"
+            android:textColor="@color/edition_update_version_name"
+            android:textSize="18dp"
+            skin:enable="true"
+            android:text="@string/StatusDialog_Open" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_update_bottom"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        skin:enable="true">
+
+        <com.kaiserkalep.widgets.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/StatusDialog_Time"
+            android:textColor="@color/edition_update_content_title"
+            android:layout_marginBottom="15dp"
+            android:textSize="14dp"
+            skin:enable="true" />
+
+        <TextView
+            android:id="@+id/gamestatus_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4.5dp"
+            android:textColor="@color/edition_update_content_text"
+            android:textSize="14dp"
+            skin:enable="true"
+            tools:text="2021.10.30-2021.10.01 10:30" />
+
+        <com.kaiserkalep.widgets.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/StatusDialog_Content"
+            android:textColor="@color/edition_update_content_title"
+            android:textSize="14dp"
+            skin:enable="true" />
+
+
+        <com.kaiserkalep.widgets.MyMaxHeightScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="35dp"
+            android:scrollbarThumbVertical="@drawable/layer_recycle_scrollbar2"
+            android:scrollbars="vertical"
+            app:my_max_height="230dp"
+            skin:enable="true">
+
+            <TextView
+                android:id="@+id/gamestatus_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4.5dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/edition_update_content_text"
+                android:textSize="14dp"
+                skin:enable="true"
+                tools:text="1:修复重大bug\n2:可以添加邮箱" />
+
+        </com.kaiserkalep.widgets.MyMaxHeightScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

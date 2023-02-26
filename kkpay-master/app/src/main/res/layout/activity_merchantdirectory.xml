@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/comm_line2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_search_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/icon_search" />
+
+                <com.kaiserkalep.widgets.CleanEditTextView
+                    android:id="@+id/et_sh_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/no_color"
+                    android:gravity="center_vertical"
+                    android:hint="@string/depositsh_search_name_tip"
+                    android:imeOptions="actionSearch"
+                    android:lines="1"
+                    android:maxLength="30"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:singleLine="true"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:layout_gravity="start"
+                android:background="@color/sale_indicator_bg" />
+
+        </LinearLayout>
+
+        <com.kaiserkalep.widgets.ViewPagerFixed
+            android:id="@+id/view_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

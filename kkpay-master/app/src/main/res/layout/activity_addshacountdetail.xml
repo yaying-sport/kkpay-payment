@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <com.kaiserkalep.widgets.MySmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/view_bg"
+        app:srlEnableLoadMore="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/ScanManagesh_detail_tip"
+                    android:textColor="@color/sh_g_color"
+                    android:textSize="10dp" />
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="9dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:ignore="RtlSymmetry">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="25dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/Share_Avatar"
+                                android:textColor="@color/sh_g_color"
+                                android:textSize="12dp" />
+
+                            <ImageView
+                                android:id="@+id/iv_logo"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                tools:background="@drawable/icon_default_photo" />
+
+                        </RelativeLayout>
+
+                        <View style="@style/line_vertical" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="25dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/ScanManagesh_detail_Business_Name"
+                                android:textColor="@color/sh_g_color"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/sh_m_color"
+                                android:textSize="12dp"
+                                tools:text="XXX" />
+
+                        </RelativeLayout>
+
+                        <View style="@style/line_vertical" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="25dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/home_wallet_address_tip"
+                                android:textColor="@color/sh_g_color"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tv_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/sh_m_color"
+                                android:textSize="12dp"
+                                tools:text="XXX" />
+
+                        </RelativeLayout>
+
+                        <View style="@style/line_vertical" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_qrcode_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/ScanManagesh_detail_QR_code"
+                                android:textColor="@color/sh_g_color"
+                                android:textSize="12dp" />
+
+                            <ImageView
+                                android:id="@+id/iv_qrcode"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="9dp"
+                                android:layout_toStartOf="@+id/iv_jt_tip"
+                                tools:background="@drawable/icon_default_photo" />
+
+                            <ImageView
+                                android:id="@+id/iv_jt_tip"
+                                android:layout_width="6dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/icon_mine_arrow_r" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_account_tip"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textColor="@color/sh_m_color"
+                            android:textSize="12dp"
+                            tools:text="@string/depositsh_wj_title" />
+
+                        <com.kaiserkalep.widgets.CleanEditTextView
+                            android:id="@+id/et_account"
+                            style="@style/login_Edit_Style"
+                            android:gravity="center_vertical"
+                            android:hint="@string/addManagesh_input_wj_account_tip"
+                            android:maxLines="1"
+                            android:maxLength="32"
+                            android:paddingEnd="10dp"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:minHeight="120dp"
+                    android:layout_height="match_parent">
+
+                    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                        android:id="@+id/sl_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="50dp"
+                        app:clickable="false"
+                        app:hl_bindTextView="@id/tv_text"
+                        app:hl_clickable_text="true"
+                        app:hl_cornerRadius="23dp"
+                        app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+                        app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+                        app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+                        app:hl_textColor="@color/btn_confirm"
+                        app:hl_textColor_true="@color/btn_confirm_true">
+
+                        <TextView
+                            android:id="@+id/tv_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/Share_add"
+                            android:textSize="15dp" />
+
+                    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.kaiserkalep.widgets.MySmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhongjh.albumcamerarecorder.widget.ChildClickableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/black_eighty_percent"
+    android:orientation="vertical"
+    android:paddingTop="1dp">
+
+    <!-- 拍摄 -->
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        app:cameraAudio="on"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+        app:cameraEngine="camera1"
+        app:cameraExperimental="true"
+        app:cameraFacing="back"
+        app:cameraFlash="auto"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="filterControl1"
+        app:cameraGestureScrollVertical="exposureCorrection"
+        app:cameraGestureTap="autoFocus"
+        app:cameraGrid="off"
+        app:cameraMode="video"
+        app:cameraPlaySounds="true"
+        app:cameraPreview="glSurface"
+        app:cameraPreviewFrameRate="22" />
+
+    <FrameLayout
+        android:id="@+id/flShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:visibility="gone">
+
+        <it.sephiroth.android.library.imagezoom.ImageViewTouch
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="如果是单张照片便显示当前拍照的"
+            android:visibility="invisible"
+            tools:ignore="HardcodedText" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="#4D000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="@string/z_please_read_numbers" />
+
+        <TextView
+            android:id="@+id/tv_didplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:includeFontPadding="true"
+            android:lineSpacingExtra="5dp"
+            android:lineSpacingMultiplier="1"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:text="9584" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMenu"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_white_24dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgSwitch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_flash_on"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camera_zjh"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vLine1"
+        android:background="#20000000"
+        android:contentDescription="显示多个图片的"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/vLine1"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@+id/vLine2"
+        android:background="#20000000"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/vLine2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/vLine3"
+        android:background="#40000000"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/vLine3"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@+id/pvLayout" />
+
+    <com.zhongjh.albumcamerarecorder.camera.widget.PhotoVideoLayoutBase
+        android:id="@+id/pvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="底部功能按钮"
+        tools:ignore="HardcodedText" />
+
+</com.zhongjh.albumcamerarecorder.widget.ChildClickableFrameLayout>

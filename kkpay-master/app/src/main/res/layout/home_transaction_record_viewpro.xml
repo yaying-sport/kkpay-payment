@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_sh_deposit"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_sh_deposit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/home_help_tab_sh_deposit"
+            android:textColor="@color/home_transactionRcord_text_tip"
+            android:textSize="11dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_transaction_record_jl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_home_jilu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/home_transaction_record_jilu"
+            android:textColor="@color/home_transactionRcord_text_tip"
+            android:textSize="11dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_transaction_record_manage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/icon_home_manage"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/home_transaction_record_manage"
+            android:textColor="@color/home_transactionRcord_text_tip"
+            android:textSize="11dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sh_manage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/icon_sh_manage"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/home_help_tab_sh_manage"
+            android:textColor="@color/home_transactionRcord_text_tip"
+            android:textSize="11dp" />
+
+    </LinearLayout>
+
+</merge>

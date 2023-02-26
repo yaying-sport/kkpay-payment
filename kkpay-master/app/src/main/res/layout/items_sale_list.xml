@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kaiserkalep.widgets.shadowLayout.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sl_content"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="2dp"
+    app:hl_cornerRadius="3dp"
+    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+    app:hl_shadowColor="@color/home_shadowColor"
+    app:hl_shadowLimit="3dp"
+    app:hl_shadowOffsetY="1dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_item_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:scaleType="fitXY"
+            tools:background="@drawable/icon_sale_item_cancle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/iv_item_logo"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_item_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sale_item_id_money_textcolor"
+                android:textSize="15dp"
+                tools:text="13245678901" />
+
+            <LinearLayout
+                android:id="@+id/ll_state_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_item_id"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tv_item_state"
+                    android:layout_width="45dp"
+                    android:layout_height="17dp"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/sale_item_state"
+                    android:textSize="9dp"
+                    tools:background="@drawable/shape_sale_item_state_jx"
+                    tools:text="@string/sale_item_state_jx" />
+
+                <LinearLayout
+                    android:id="@+id/ll_item_state_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_item_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_state_view"
+                android:textColor="@color/sale_item_date_time"
+                android:textSize="9dp"
+                tools:text="2022-01-15 19:11:0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_item_date_time"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_item_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:textColor="@color/sale_item_money"
+                    android:textSize="20dp"
+                    tools:text="9685.0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:gravity="bottom"
+                    android:text="@string/home_wallet_tip"
+                    android:textColor="@color/sale_item_money"
+                    android:textSize="6dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_item_orderno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_state_view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/sale_item_date_time"
+                android:textSize="9dp"
+                tools:text="34325346525465454" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+

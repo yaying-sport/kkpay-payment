@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/view_title_bg">
+
+        <ImageView
+            android:id="@+id/iv_top_left"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@drawable/icon_top_back" />
+
+        <com.kaiserkalep.widgets.BoldTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/view_title_title"
+            android:textSize="17dp"
+            tools:text="BoldTv_center" />
+
+    </RelativeLayout>
+
+    <com.kaiserkalep.widgets.LoadingLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isNowLoading="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_photo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/icon_default_photo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/scan_text_m_color"
+                        android:textSize="15dp"
+                        tools:text="哆啦A梦" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_details_trade_orderno"
+                            android:textColor="@color/scan_text_m_color"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="："
+                            android:textColor="@color/scan_text_m_color"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_orderno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/scan_text_m_color"
+                            android:textSize="9dp"
+                            tools:text="255656563256456432" />
+
+                        <ImageView
+                            android:id="@+id/iv_copy_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/icon_home_copy"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="50dp"
+                        tools:text="100.0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/scan_detail_pay_money_tip"
+                        android:textColor="@color/scan_text_m_color"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:hl_cornerRadius="3dp"
+                        app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                        app:hl_shadowColor="@color/home_shadowColor"
+                        app:hl_shadowLimit="3dp"
+                        app:hl_shadowOffsetY="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:text="@string/safety_passpay"
+                                android:textColor="@color/order_details_m_tip"
+                                android:textSize="12dp" />
+
+                            <com.kaiserkalep.widgets.FillBlankView
+                                android:id="@+id/fbv_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="numberPassword"
+                                android:padding="5dp"
+                                android:textColor="@color/passpay_text_color"
+                                app:blankCornerRadius="3dp"
+                                app:blankSolidColor="@color/safety_passpay_bg"
+                                app:blankSpace="10dp"
+                                app:blankStrokeColor="@color/safety_passpay_stroke"
+                                app:blankStrokeWidth="1dp"
+                                app:dotColor="@color/safety_passpay_stroke" />
+
+                        </LinearLayout>
+
+                    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                        android:id="@+id/sl_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="30dp"
+                        app:clickable="false"
+                        app:hl_bindTextView="@id/tv_text"
+                        app:hl_clickable_text="true"
+                        app:hl_cornerRadius="23dp"
+                        app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+                        app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+                        app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+                        app:hl_textColor="@color/btn_confirm"
+                        app:hl_textColor_true="@color/btn_confirm_true">
+
+                        <TextView
+                            android:id="@+id/tv_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/Share_Pay"
+                            android:textSize="15dp" />
+
+
+                    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.kaiserkalep.widgets.LoadingLayout>
+
+</LinearLayout>

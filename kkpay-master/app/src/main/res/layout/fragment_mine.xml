@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kaiserkalep.widgets.MySmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    app:srlEnableLoadMore="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/icon_mine_head" />
+
+            <ImageView
+                android:id="@+id/iv_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_mine_setting"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/iv_bar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:src="@drawable/icon_mine_setting" />
+
+            <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                android:id="@+id/sl_user_content"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/iv_mine_setting"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="10dp"
+                app:hl_cornerRadius="3dp"
+                app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                app:hl_shadowColor="@color/home_shadowColor"
+                app:hl_shadowLimit="3dp"
+                app:hl_shadowOffsetY="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_above="@+id/rl_address_view"
+                        android:orientation="horizontal">
+
+                        <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                            android:id="@+id/sl_usermine_photo"
+                            android:layout_width="66dp"
+                            android:layout_height="66dp"
+                            android:layout_marginStart="33dp"
+                            app:hl_cornerRadius="32dp"
+                            app:hl_layoutBackground="@color/home_default_photo_bg">
+
+                            <ImageView
+                                android:id="@+id/iv_mineuser_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                tools:src="@drawable/icon_default_photo" />
+
+                        </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_edit_nickname_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="horizontal"
+                                android:paddingStart="2dp"
+                                android:paddingEnd="2dp">
+
+                                <com.kaiserkalep.widgets.BoldTextView
+                                    android:id="@+id/tv_nickname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/mine_nickname"
+                                    android:textSize="17dp"
+                                    android:textStyle="bold"
+                                    tools:text="134567890" />
+
+                                <ImageView
+                                    android:id="@+id/iv_nickname_edit"
+                                    android:layout_width="17dp"
+                                    android:layout_height="17dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="7dp"
+                                    android:background="@drawable/icon_edit_nickname" />
+
+                            </LinearLayout>
+
+                            <com.kaiserkalep.widgets.BoldTextView
+                                android:id="@+id/tv_mine_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="4.5dp"
+                                android:textColor="@color/mine_nickname"
+                                android:textSize="17dp"
+                                tools:text="134567890" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_address_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_mine_user_address_bg">
+
+                        <ImageView
+                            android:id="@+id/iv_mine_address_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="9dp"
+                            android:src="@drawable/icon_home_address" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/iv_mine_address_icon"
+                            android:layout_toRightOf="@+id/iv_mine_address_icon"
+                            android:text="@string/home_wallet_address_tip"
+                            android:textColor="@color/home_Wallet_address_text_color"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_mine_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/home_Wallet_address_text_color"
+                            android:textSize="9dp"
+                            tools:text="2e1774c17adfd327" />
+
+                        <ImageView
+                            android:id="@+id/iv_mine_copy_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="9dp"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_home_copy" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+        </RelativeLayout>
+
+        <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:hl_cornerRadius="3dp"
+            app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+            app:hl_shadowColor="@color/home_shadowColor"
+            app:hl_shadowLimit="3dp"
+            app:hl_shadowOffsetY="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_click_update_loginpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_pass" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/mine_update_login_pass"
+                        android:textColor="@color/mine_llclick_title"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/icon_mine_arrow_r" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_vertical"
+                    android:layout_marginStart="40dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_click_update_paypass"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_pass" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/mine_update_pay_pass"
+                        android:textColor="@color/mine_llclick_title"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/icon_mine_arrow_r" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+        <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:hl_cornerRadius="3dp"
+            app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+            app:hl_shadowColor="@color/home_shadowColor"
+            app:hl_shadowLimit="3dp"
+            app:hl_shadowOffsetY="1dp">
+
+            <LinearLayout
+                android:id="@+id/ll_click_Verified"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_verify" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/Share_VerifyNew"
+                    android:textColor="@color/mine_llclick_title"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:src="@drawable/icon_mine_arrow_r" />
+
+            </LinearLayout>
+
+        </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+        <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:hl_cornerRadius="3dp"
+            app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+            app:hl_shadowColor="@color/home_shadowColor"
+            app:hl_shadowLimit="3dp"
+            app:hl_shadowOffsetY="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_click_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_feedback" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Share_Feedback"
+                            android:textColor="@color/mine_llclick_title"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/v_feedback_icon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/shape_corner3_orange"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/icon_mine_arrow_r" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_vertical"
+                    android:layout_marginStart="40dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_click_check_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_renew" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/setting_Check_Updates"
+                        android:textColor="@color/mine_llclick_title"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:id="@+id/versionUpdateIcon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/shape_corner3_orange"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_current_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:textColor="@color/setting_version_num"
+                        android:textSize="14dp"
+                        tools:text="当前版本v1.0.0" />
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/icon_mine_arrow_r" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+    </LinearLayout>
+
+</com.kaiserkalep.widgets.MySmartRefreshLayout>
+

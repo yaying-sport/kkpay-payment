@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <dimen name="home_mysell_minheight">220dp</dimen>
+    <dimen name="marginTop_StatusBar">25dp</dimen>
+    <dimen name="logo_top_view_height">180dp</dimen>
+    <dimen name="title_height">47dp</dimen>
+    <!-- 顶部按钮padding -->
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+    <dimen name="main_home_tab">75dp</dimen>
+    <dimen name="main_home_tab_item_height">49dp</dimen>
+    <dimen name="home_project_shadow">6dp</dimen>
+    <!-- 选项文字大小 -->
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+
+</resources>

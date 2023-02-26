@@ -1,0 +1,6 @@
+include ':common'
+include ':imageedit'
+include ':multilibrary'
+include ':lib'
+include ':app', 'svgalibrary','xpopuplibrary','zxinglite'
+rootProject.name = 'KkPay'

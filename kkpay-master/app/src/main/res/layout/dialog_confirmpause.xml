@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="267dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_common_dialog"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="27dp"
+        skin:enable="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_pause_coin" />
+
+        <com.kaiserkalep.widgets.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Tips"
+            android:textColor="@color/dialog_coin_title_tip"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            skin:enable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/dialog_coin_content_tip"
+            android:textColor="@color/dialog_coin_content_tip"
+            android:textSize="12dp"
+            skin:enable="true" />
+
+        <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+            android:id="@+id/sl_btn_pause"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            app:clickable="true"
+            app:hl_cornerRadius="23dp"
+            app:hl_layoutBackground="@drawable/shape_red_bg"
+            app:hl_layoutBackground_clickFalse="@drawable/shape_red_half_bg"
+            app:hl_layoutBackground_true="@drawable/shape_red_bg"
+            app:hl_textColor="@color/btn_confirm"
+            app:hl_textColor_true="@color/btn_confirm_true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/Share_pasue_coin"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/dialog_no_receive_money_tip"
+                    android:textColor="@color/white"
+                    android:textSize="8dp" />
+
+            </LinearLayout>
+
+        </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_close_verify" />
+
+</LinearLayout>

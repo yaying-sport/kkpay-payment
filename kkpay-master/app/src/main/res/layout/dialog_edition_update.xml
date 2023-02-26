@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="311dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    skin:enable="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_update_head"
+        skin:enable="true">
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="45dp"
+            android:textColor="@color/edition_update_version_name"
+            android:textSize="16dp"
+            skin:enable="true"
+            tools:text="12345" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_update_bottom"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        skin:enable="true">
+
+
+        <com.kaiserkalep.widgets.BoldTextView
+            android:id="@+id/text_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/UpdateDialog_Content"
+            android:textColor="@color/edition_update_content_title"
+            android:textSize="14dp"
+            skin:enable="true"
+            tools:text="12345" />
+
+
+        <com.kaiserkalep.widgets.MyMaxHeightScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            android:scrollbarThumbVertical="@drawable/layer_recycle_scrollbar2"
+            android:scrollbars="vertical"
+            app:my_max_height="230dp"
+            skin:enable="true">
+
+            <TextView
+                android:id="@+id/update_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4.5dp"
+                android:textColor="@color/edition_update_content_text"
+                android:textSize="14dp"
+                skin:enable="true"
+                tools:text="1:修复重大bug\n2:可以添加邮箱" />
+
+        </com.kaiserkalep.widgets.MyMaxHeightScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                android:id="@+id/sl_update"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:clickable="true"
+                app:hl_bindTextView="@id/tv_confirm_text"
+                app:hl_clickable_text="true"
+                app:hl_cornerRadius="5dp"
+                app:hl_layoutBackground="@drawable/shape_click_btn_bg"
+                app:hl_layoutBackground_clickFalse="@drawable/shape_click_btn_bg_click_false"
+                app:hl_layoutBackground_true="@drawable/shape_click_btn_bg_true"
+                app:hl_textColor="@color/click_btn_confirm"
+                app:hl_textColor_true="@color/click_btn_confirm_true">
+
+                <TextView
+                    android:id="@+id/tv_confirm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/UpdateDialog_NowUpData"
+                    android:textSize="16dp" />
+
+
+            </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_progress_content"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone">
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/update_progress"
+                    skin:enable="true"
+                    tools:progress="40" />
+
+
+                <TextView
+                    android:id="@+id/tv_progress_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0%"
+                    android:textColor="@color/edition_update_progress_value"
+                    android:textSize="10dp"
+                    skin:enable="true" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/UpdateDialog_TellLater"
+                android:textColor="@color/edition_update_cancel"
+                android:textSize="14dp"
+                android:visibility="invisible"
+                skin:enable="true" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/iv_down_icon"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/updata_down_load_icon" />
+
+            <TextView
+                android:id="@+id/tv_tip_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@+id/iv_down_icon"
+                android:gravity="center"
+                android:text="@string/updata_dialog_servse_normal_text"
+                android:textColor="@color/updata_dialog_servse_normal_textcolor"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_intent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tip_one"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/iv_down_icon"
+                android:text="@string/updata_dialog_servse_intent_text"
+                android:textColor="@color/updata_dialog_servse_intent_textcolor"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

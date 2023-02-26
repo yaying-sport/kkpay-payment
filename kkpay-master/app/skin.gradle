@@ -1,0 +1,60 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+ext {
+    getCurrentSkin = this.&getCurrentSkin
+    getCurrentFlavor = this.&getCurrentFlavor
+    getAgentSuffix = this.&getAgentSuffix
+}
+
+def getAllSkin() {
+    return [
+            //皮肤  1,低调黑(默认)  3,简约白   5,妖艳紫  7,诱惑黄......
+            //皮肤文件名称,为空使用黑色默认皮肤
+            '1': '',
+            '3': 'white.skin',
+            '5': 'purple.skin',
+            '7': 'yellow.skin'
+    ]
+}
+
+def getCurrentSkin(def currentFlavor) {
+    def allSkin = getAllSkin()
+    if (currentFlavor) {
+        String[] splits = currentFlavor.split("_")
+        def currentSkin = splits[2]
+        println("currentSkin:" + currentSkin)
+        return allSkin.get(currentSkin)
+    }
+    return allSkin.get(0)
+}
+
+//agent_11_7
+def getAgentSuffix(def currentFlavor) {
+    if (currentFlavor) {
+        currentFlavor = currentFlavor.substring(0, currentFlavor.lastIndexOf("_"))
+        println("getAgentSuffix:" + currentFlavor)
+        return currentFlavor
+    }
+    return ""
+}
+
+def getCurrentFlavor() {
+    Gradle gradle = getGradle()
+    String taskStr = gradle.getStartParameter().getTaskRequests().toString()
+    println("taskStr:" + taskStr)
+    println()
+    Pattern pattern;
+    if (taskStr.contains("assemble")) {
+        pattern = Pattern.compile("assemble(\\w+)(Release|Debug)")
+    } else {
+        pattern = Pattern.compile("generate(\\w+)(Release|Debug)")
+    }
+    Matcher matcher = pattern.matcher(taskStr)
+    if (matcher.find()) {
+        String name = matcher.group(1).toLowerCase()
+        println("Flavorname:" + name)
+        return name
+    }
+    return ""
+}

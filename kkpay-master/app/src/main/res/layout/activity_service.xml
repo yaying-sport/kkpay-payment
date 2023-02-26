@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kaiserkalep.widgets.MySmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlEnableLoadMore="false"
+    app:srlEnableNestedScrolling="true"
+    app:srlEnableOverScrollBounce="false"
+    app:srlEnableOverScrollDrag="false"
+    app:srlEnablePureScrollMode="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/servicee_main_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_service_head" />
+
+        <ImageView
+            android:id="@+id/iv_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.kaiserkalep.widgets.CommTitle
+            android:id="@+id/comm_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:layout_below="@+id/iv_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/comm_title"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical">
+
+            <com.kaiserkalep.widgets.TouchAnimRelativeLayout
+                android:id="@+id/tarl_content"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_service_guide">
+
+
+                <ImageView
+                    android:id="@+id/iv_service_portrait"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="19dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_default_photo" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_welcome_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_toEndOf="@id/iv_service_portrait"
+                    android:textColor="@color/service_title"
+                    android:textSize="18dp"
+                    android:text="Hi，" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38dp"
+                    android:layout_toEndOf="@id/tv_welcome_tip"
+                    android:textColor="@color/service_title"
+                    android:textSize="18dp"
+                    tools:text="用户123456" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_welcome"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/iv_service_portrait"
+                    android:text="@string/srvicefragment_customer_service"
+                    android:textColor="@color/service_title_sec"
+                    android:textSize="12dp" />
+
+            </com.kaiserkalep.widgets.TouchAnimRelativeLayout>
+
+
+            <com.kaiserkalep.widgets.TouchAnimImageView
+                android:id="@+id/iv_main_service"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="-5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_main_service"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.kaiserkalep.widgets.TouchAnimImageView
+                android:id="@+id/iv_second_service"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_second_service"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.kaiserkalep.widgets.MySmartRefreshLayout>

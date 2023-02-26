@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="336dp"
+    tools:background="@color/black"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_gravity="end"
+        android:id="@+id/iv_cloase"
+        android:padding="10dp"
+        android:src="@drawable/icon_close_msg_notice"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        app:hl_cornerRadius="10dp"
+        app:hl_layoutBackground="@color/white"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_margin="15dp"
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.kaiserkalep.widgets.RoundImageView
+                    tools:background="@color/black"
+                    android:id="@+id/iv_bg_view"
+                    android:layout_width="match_parent"
+                    tools:layout_height="200dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_slider_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:id="@+id/iv_refresh"
+                    android:layout_marginRight="2dp"
+                    android:padding="10dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/icon_refresh_slider"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    tools:text="1234"
+                    android:textSize="11dp"
+                    android:id="@+id/tv_result_status"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    tools:background="@drawable/slider_result_status_succeed"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="50dp">
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    app:hl_layoutBackground="@color/slider_bg_out"
+                    app:hl_cornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.kaiserkalep.widgets.BoldTextView
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slidervalidationdialog_SliderPuzzle"
+                        android:textColor="@color/slider_bg_text"
+                        android:textSize="13dp" />
+
+                    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                        app:hl_layoutBackground="@color/slider_pr_bg"
+                        app:hl_cornerRadius_leftTop="5dp"
+                        app:hl_cornerRadius_leftBottom="5dp"
+                        android:layout_width="23dp"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <com.kaiserkalep.widgets.NoClickSeekBar
+                    android:splitTrack="false"
+                    tools:progress="50"
+                    android:id="@+id/sb_slider"
+                    android:minHeight="50dp"
+                    android:maxHeight="50dp"
+                    android:thumbOffset="22dp"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="23dp"
+                    android:progressDrawable="@drawable/seekbar_progress_drawable"
+                    android:background="@null"
+                    android:thumb="@drawable/slider_thumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+</LinearLayout>

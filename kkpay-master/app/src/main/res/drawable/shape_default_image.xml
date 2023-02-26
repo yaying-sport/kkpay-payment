@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:opacity="opaque">
+    <item android:gravity="fill">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/home_banner_def" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+
+            android:src="@drawable/icon_image_def" />
+    </item>
+</layer-list>

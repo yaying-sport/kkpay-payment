@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/comm_line2" />
+
+    <com.kaiserkalep.widgets.MySmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tv_addpay_tip"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="13dp"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:text="@string/wallet_add_bank_tip"-->
+            <!--                android:textColor="@color/sh_g_color"-->
+            <!--                android:textSize="11dp" />-->
+
+            <com.kaiserkalep.widgets.shadowLayout.TouchShadowLayout
+                android:id="@+id/sl_click_add"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                app:hl_cornerRadius="5dp"
+                app:hl_layoutBackground="@color/view_title_bg"
+                app:hl_shadowColor="@color/shadow_layout_color"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/icon_wallet_add" />
+
+                    <com.kaiserkalep.widgets.BoldTextView
+                        android:id="@+id/sl_addFrist_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wallet_add_bank"
+                        android:textColor="@color/wallet_add_color"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+
+            </com.kaiserkalep.widgets.shadowLayout.TouchShadowLayout>
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="3dp"-->
+            <!--                android:layout_gravity="bottom"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:background="@drawable/shape_rec_top_shadow" />-->
+
+            <com.kaiserkalep.widgets.MyRecycleView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp" />
+
+        </LinearLayout>
+
+    </com.kaiserkalep.widgets.MySmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,532 @@
+<!--<!DOCTYPE resources [<!ENTITY app_name "kkPay">]>-->
+<resources>
+    <string name="app_name">KKPay</string>
+    <string name="Channel_Id">消息</string>
+    <string name="Channel_Name">重要通知</string>
+    <string name="Channel_Description">接收重要通知,建议开启</string>
+    <string name="no_content">暂无数据</string>
+    <string name="no_network">网络不给力，刷新页面试试</string>
+    <string name="toast_common_system_net_stablize">网络不稳定，请稍后再试</string>
+    <string name="toast_common_not_connect_server">无法链接服务器，请联系客服</string>
+    <string name="toast_next_press_exit">再按一次退出</string>
+    <string name="reload_button">刷新一下</string>
+    <string name="StatusDialog_Open">维护升级中</string>
+    <string name="StatusDialog_Time">维护时间</string>
+    <string name="StatusDialog_Content">维护内容</string>
+    <string name="msgnoticedialog_MoreAnnouncements">更多公告</string>
+    <!--公告弹框(重要公告) (MyDialogManager - NoticeDialog) -->
+    <string name="noticedialog_DoNotRemindMeToday">今日不再提醒</string>
+    <string name="addbankactivity_ReceivingQRCode_tip">仅支持jpg、png格式图片，图片大小在1MB之内</string>
+    <string name="QrPhoto_Error_Tip">无效二维码</string>
+    <string name="add_photo">添加照片</string>
+    <string name="open_photo">相册</string>
+    <string name="open_camera">拍摄</string>
+    <string name="Financial_security_Verified_tip">为保证您的账户安全，请先完成实名认证</string>
+    <string name="wallet_add_pay_tip">*请录入本人真实信息，否则造成的一切损失，由会员自行承担，平台不负担任何责任。</string>
+    <string name="wallet_add_tip">收款码需要审核通过后,才可用于提款</string>
+    <string name="wallet_Unbind">是否删除该</string>
+    <string name="System_copytext_Success">复制成功</string>
+    <string name="System_Revise_Success">修改成功</string>
+    <string name="order_Revoke_Success">撤单成功</string>
+    <string name="order_Buy_Success">购买成功</string>
+    <string name="home_first_verified">请先实名</string>
+    <string name="verify_dialog_title">身份认证</string>
+    <string name="verify_dialog_title_tip">请先进行实名认证</string>
+    <string name="add_pay_dialog_title">添加收付款信息</string>
+    <string name="please_input_password_tip">请输入支付密码</string>
+    <string name="please_input_passw_finish_tip">请输入完整密码</string>
+    <string name="add_pay_dialog_title_tip">请先添加收付款信息</string>
+    <string name="buy_coin_correspind_paytype_tip">请添加对应支付方式</string>
+    <string name="please_buyjia_upload_pay_pingzeng_tip">请先上传支付凭证</string>
+    <string name="Not_buy_me_order_tip">不能购买自己的订单</string>
+    <string name="sell_money_cannot_less_ten_tip">挂单金额不能低于10KKG</string>
+    <string name="webviewfragment_DialogBox">对话框</string>
+    <string name="Open_Notice_Title">通知设置</string>
+    <string name="Open_First_Notice_Content_one">将跳转设置页面</string>
+    <string name="Open_First_Notice_Content_two">请开启悬浮通知,声音,震动等开关.</string>
+    <string name="Open_First_Notice_Content_thr">(进入我的-设置页面-通知管理修改)</string>
+    <string name="Share_Error">异常</string>
+    <string name="Share_Save_Success">保存成功</string>
+    <string name="Share_Save_Error">异常,请截图保存</string>
+    <string name="Share_Data_Error">数据异常</string>
+    <string name="Wechat_name">微信</string>
+    <string name="Alipay_name">支付宝</string>
+    <string name="Bank_name">银行卡</string>
+    <string name="Rationale_Canera_title">相机权限申请</string>
+    <string name="Rationale_Canera_Msg">请开启相机权限</string>
+    <string name="Rationale_Audio_Canera_title">麦克风/相机权限申请</string>
+    <string name="Rationale_Audio_Canera_Msg">请开启麦克风/相机权限</string>
+    <string name="goTo_Setting_tip">跳转设置</string>
+    <string name="dialog_coin_content_tip">请您核实是否收到买家的转账,一旦放币将无法追回,确定收到买家的转账再放币。</string>
+    <string name="dialog_coin_cancel_content_one_tip">多次取消会导致被列为风险账号,</string>
+    <string name="dialog_coin_cancel_content_two_tip">是否确认取消订单</string>
+    <string name="buy_dialog_tip_title">买家须知</string>
+    <string name="buy_dialog_tip_one">1.需要用您绑定的付款信息给卖家付款,如付款信息不符,卖家有权利不给您打币。</string>
+    <string name="buy_dialog_tip_two">2.如果交易中双方发生纠纷,请点击右上角交易纠纷申请客服接入处理。</string>
+    <string name="buy_dialog_tip_thr">3.用户连续5次违反平台交易规则，如：用户取消交易、卖家10分钟内不确认交易、卖家20分钟内未打币、买家20分钟内不转账；会被列为风险账号，24小时禁止交易。</string>
+    <string name="buy_dialog_tip_four">4.买家恶意上传虚假付款信息,查证属实会永久封停账号。</string>
+    <string name="sell_dialog_tip_title">卖家须知</string>
+    <string name="sell_dialog_tip_one">1.请检查是否收到此款项,若没有收到,请点击⌈暂停打币⌋,并且点击右上角⌈交易纠纷⌋处理,若收到,请尽快点击⌈确认打币⌋,多次不点击确认打币,经查实,将被列为风险账号。</string>
+    <string name="sell_dialog_tip_two">2.收到的款项如与买家购买的信息上的付款信息不一致,卖家有权不打币。</string>
+    <string name="sell_dialog_tip_thr">3.如有收到此款项,恶意点击暂停打币,经查实,将永久封号。</string>
+    <string name="sell_dialog_tip_four">4.用户连续5次违反平台交易规则，如：用户取消交易、卖家10分钟内不确认交易、卖家20分钟内未打币、买家20分钟内不转账；会被列为风险账号，24小时禁止交易。</string>
+
+    <string name="addsh_addsh_text_tip_one">该商户不在您的商户通讯录中，</string>
+    <string name="addsh_addsh_text_tip_two">是否添加</string>
+    <string name="addsh_addwj_text_tip_one">该玩家不在您的玩家通讯录中，</string>
+    <string name="addsh_addwj_text_tip_two">是否添加</string>
+    <string name="addsh_addsh_success_tip">添加商户成功</string>
+    <string name="addsh_addwj_success_tip">添加玩家账号成功</string>
+
+    <string name="data_Monday">周一</string>
+    <string name="data_Sunday">周日</string>
+    <string name="data_Tuesday">周二</string>
+    <string name="data_Wednesday">周三</string>
+    <string name="data_Thursday">周四</string>
+    <string name="data_Friday">周五</string>
+    <string name="data_Saturday">周六</string>
+
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+
+    <string name="Share_cancel">取消</string>
+    <string name="Share_reset">重置</string>
+    <string name="Share_cancel_order">取消交易</string>
+    <string name="Share_submit">提交</string>
+    <string name="Share_certain">确定</string>
+    <string name="allow">允许</string>
+    <string name="reject">拒绝</string>
+    <string name="Share_certain_order">确定交易</string>
+    <string name="Share_add">添加</string>
+    <string name="Share_save">保存</string>
+    <string name="Share_finish">完成</string>
+    <string name="Share_Feedback">意见反馈</string>
+    <string name="Share_MyFeedback">我的反馈</string>
+    <string name="Share_Feedback_Detail">反馈详情</string>
+    <string name="Share_VerifyNew">实名认证</string>
+    <string name="Share_Now_VerifyNew">立即认证</string>
+    <string name="Share_Now_Add">立即添加</string>
+    <string name="Share_dialog_title">对话框</string>
+    <string name="Share_delete">删除</string>
+    <string name="Share_delete_Merchant">删除商户</string>
+    <string name="Share_Nickname">昵称</string>
+    <string name="Share_name">名字</string>
+    <string name="Share_next_step">下一步</string>
+    <string name="Share_open_face">开始录制</string>
+    <string name="Share_again_face">重新审核</string>
+    <string name="Share_lookall">查看全部</string>
+    <string name="Share_bank_no">卡号</string>
+    <string name="Share_Account">账号</string>
+    <string name="Share_URL">网址</string>
+    <string name="Share_tip">提示</string>
+    <string name="Share_Buy">购买</string>
+    <string name="Share_Sell">出售</string>
+    <string name="Share_Revoke">撤销</string>
+    <string name="Share_Total">总数</string>
+    <string name="Share_Reload">刷新</string>
+    <string name="Share_certain_coin">确定打币</string>
+    <string name="Share_pasue_coin">暂停打币</string>
+    <string name="Share_Pay_Qrcode">付款码</string>
+    <string name="Share_bank">银行</string>
+    <string name="Share_Operate_Success">操作成功</string>
+    <string name="Share_Operate_Frequently">操作频繁</string>
+    <string name="Share_Notified_Success">已成功通知对方</string>
+    <string name="Share_Pay">支付</string>
+    <string name="Share_Close">关闭</string>
+    <string name="Share_Important_Reminder">重要提醒</string>
+    <string name="Share_Resend">重新发送</string>
+    <string name="Share_JumpIoOver">跳过</string>
+    <string name="Share_GoJoin">进入</string>
+    <string name="Share_Manage">管理</string>
+    <string name="Share_MoreUrl"><u>网址</u></string>
+    <string name="Share_or">或</string>
+    <string name="Share_Avatar">头像</string>
+    <string name="Share_Recent">最近</string>
+    <string name="Share_All">全部</string>
+    <string name="Share_WjAccount">玩家账号</string>
+    <string name="Share_delSh_Success">移除商户成功</string>
+    <string name="Share_delWj_Success">移除玩家成功</string>
+
+    <string name="include_phoneNumber">手机号码</string>
+    <string name="include_phoneNumber_tip">请输入11位手机号码</string>
+    <string name="include_VerificationCode">请输入验证码</string>
+    <string name="include_VerificationCode_tip">请输入手机验证码</string>
+    <string name="include_getVerificationCode">获取验证码</string>
+
+    <string name="loginactivity_RememberPassword">记住密码</string>
+    <string name="Share_Contact_Customer_Service">联系客服</string>
+    <string name="load_all_data">没有更多了</string>
+    <string name="load_up_more_data">上拉加载更多</string>
+    <string name="load_dowm_more_data">松开立即加载</string>
+    <!--************************************************************************************-->
+
+    <string name="main_tab_home">首页</string>
+    <string name="main_tab_guadan">挂单</string>
+    <string name="main_tab_service">客服</string>
+    <string name="main_tab_order">订单</string>
+    <string name="main_tab_mine">我的</string>
+    <string name="setting_title">设置</string>
+    <string name="verifynew_title">个人资料</string>
+    <string name="webviewa_title">webView页面</string>
+
+    <string name="Scan_Detail_title">我的订单</string>
+
+    <string name="service_ttitle">我的客服</string>
+    <string name="Tips">温馨提示</string>
+    <string name="deposit_success_tip">存款成功</string>
+    <string name="editor_user_title">编辑用户信息</string>
+    <!--开屏广告图片缓存路径-->
+    <string name="ZZImageAdCache">kk/Cache/Images/Ad</string>
+    <!--下载apk目录-->
+    <string name="ZZFileCache">apk</string>
+    <!--图片缓存路径-->
+    <string name="ZZImageCache">kk/Cache/Images</string>
+    <!--网络缓存路径-->
+    <string name="ZZNetWorkCache">kk/Cache/NetWork</string>
+    <!--缓存root-->
+    <string name="ZZRootCache">kk/Cache</string>
+
+    <string name="input_type_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="add_ali_bank_account_type_digits">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.</string>
+
+    <!--启动页 （StartActivity） *********************-->
+    <string name="startactivity_StartPage">启动页</string>
+    <string name="startactivity_StartAdPage">启动广告页</string>
+    <string name="token_out">未登录或登录超时。请重新登录</string>
+    <string name="toast_common_system_net_error">网络不可用，请稍后再试</string>
+
+    <string name="app_Currentversion">当前版本</string>
+    <string name="app_version">版本号</string>
+    <string name="UpdateDialog_Content">更新内容</string>
+    <string name="UpdateDialog_NowUpData">立即更新</string>
+    <string name="UpdateDialog_TellLater">以后再说</string>
+    <string name="UpdateDialog_BackgroundUpdate">后台更新</string>
+    <string name="UpdateDialog_DownloadPaused">下载暂停</string>
+    <string name="UpdateDialog_BrowserDownload">去浏览器下载</string>
+    <string name="UpdateDialog_BrowserDownload_Fails">下载失败,是否去浏览器下载</string>
+    <string name="updata_dialog_servse_normal_text">如无法正常更新</string>
+    <string name="updata_dialog_servse_intent_text">请点击此处官网下载 ></string>
+    <string name="storage_jurisdiction">请允许内存卡储存权限</string>
+    <string name="btn_certain">确定</string>
+    <string name="setting_singout">退出登录</string>
+    <string name="setting_about">关于我们</string>
+    <string name="setting_notify">通知设置</string>
+    <string name="setting_notify_tip">(订单悬浮通知,声音,震动等设置)</string>
+    <string name="setting_clear_cache">清除缓存</string>
+    <string name="settingactivity_ClearedSuccess">清除成功</string>
+    <string name="setting_Check_Updates">检查更新</string>
+    <string name="settingactivity_LatestVersion">当前已是最新版本</string>
+    <string name="Frequent_operations">操作频繁,请稍后再试.</string>
+
+    <string name="VerifiedFails_TryAgain">验证失败，请重试！</string>
+    <string name="slidervalidationdialog_SliderPuzzle">拖动滑块完成拼图</string>
+    <string name="slidervalidationdialog_VerifiedSuccess">验证成功</string>
+    <string name="slidervalidationdialog_VerifiedFails_TryAgain">验证失败，请重试！</string>
+
+    <string name="login_edit_input_phone">请输入手机号</string>
+    <string name="login_edit_input_phone_error_tip">请输入11位有效手机号</string>
+    <string name="face_edit_input_name">请输入姓名</string>
+    <string name="face_edit_input_sfznumber">请输入身份证号</string>
+    <string name="login_edit_input_pass">请输入密码</string>
+    <string name="login_edit_input_next_pass">请输入确认密码</string>
+    <string name="login_edit_input_pass_error_tip">请输入6–16位字母和数字密码</string>
+    <string name="login_edit_input_newpass_error_tip">请输入6–16位字母和数字新密码</string>
+    <string name="modify_edit_loginhint_pass_one">原始密码</string>
+    <string name="modify_edit_loginhint_pass_two">新密码</string>
+    <string name="modify_edit_loginhint_pass_thr">确认新密码</string>
+    <string name="modify_edit_payhint_pass_one">原6位支付密码</string>
+    <string name="modify_edit_payhint_pass_two">新6位支付密码</string>
+    <string name="modify_edit_payhint_pass_thr">确认6位支付新密码</string>
+    <string name="modify_edit_paypass_error_tip">请输入6位支付密码</string>
+    <string name="modify_edit_paynewpass_error_tip">请输入6位新支付密码</string>
+    <string name="login_online_service">在线客服</string>
+    <string name="login_forgot_password">忘记密码</string>
+    <string name="Money_Insufficient_balance">余额不足</string>
+    <string name="Money_Error_reEnter">金额错误,请重新输入.</string>
+    <string name="OrderNo_Error_reEnter">订单有误,请重新选择.</string>
+    <string name="OrderNo_Pay_Success">支付成功</string>
+
+    <string name="login_acitivity_title">登录</string>
+    <string name="login_btn_text">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="register_btn_text">注册</string>
+    <string name="reguster_success">注册成功</string>
+    <string name="reguster_Atleast_tip">至少阅读</string>
+    <string name="reguster_read_tip">我已阅读</string>
+    <string name="regsiter_DoublePassWord_Error">两次输入密码不一致</string>
+    <string name="send_code">验证码</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="verification_code_tip">验证码有误,请重新输入!</string>
+    <string name="set_safety_passpay">设置支付密码</string>
+    <string name="safety_passpay">支付密码</string>
+    <string name="home_welcome">欢迎</string>
+    <string name="home_balance">余额</string>
+    <string name="home_wallet_tip">KKG</string>
+    <string name="home_msg_tip">消息</string>
+    <string name="home_help_tip">帮助</string>
+    <string name="home_help_tab_sh_deposit">商户存款</string>
+    <string name="home_help_tab_sh_manage">商户管理</string>
+    <string name="home_wallet_address_tip">钱包地址</string>
+    <string name="home_transaction_saleNum_tip">可售余额</string>
+    <string name="home_transaction_not_saleNum_tip">不可售</string>
+    <string name="home_transaction_sellNum_tip">卖单余额</string>
+    <string name="home_transactioning_tip">交易中</string>
+    <string name="home_buy_btn">买币</string>
+    <string name="home_sell_btn">卖币</string>
+    <string name="home_transaction_record_dingd">我的订单</string>
+    <string name="home_transaction_record_jilu">钱包记录</string>
+    <string name="home_transaction_record_manage">收付款管理</string>
+    <string name="home_rec_guadan">我的挂单</string>
+    <string name="home_nodata_guadan">暂无挂单</string>
+    <string name="home_nodata_guadanzhong">挂单中</string>
+    <string name="sale_jinxingzhong">进行中</string>
+    <string name="sale_yiwancheng">已完成</string>
+    <string name="sale_yiquxiao">已取消</string>
+    <string name="sale_zantinging">暂停中</string>
+    <string name="sale_item_state_jx">进行中</string>
+    <string name="sale_item_state_wc">已完成</string>
+    <string name="sale_item_state_cancel">已取消</string>
+    <string name="salefragment_promotions">我的挂单</string>
+    <string name="srvicefragment_customer_service">欢迎来到客服中心</string>
+    <string name="messagenotifyfragment_MessageCenter">消息中心</string>
+    <string name="messagenotifyfragment_edit">编辑</string>
+    <string name="messagenotifyfragment_SelectAll">全选</string>
+    <string name="messagenotifyfragment_UnselectAll">取消全选</string>
+    <string name="messagenotifyfragment_MarkRead">标记已读</string>
+    <string name="messagenotifyfragment_FailedToMarkRead">标记已读失败</string>
+    <string name="messagenotifyfragment_FailedToDelete">删除失败</string>
+    <string name="messagenotifyfragment_ConfirmDelete">确定删除？</string>
+    <string name="messagenotifyfragment_ConfirmDelete_title">删除后，消息中心将不再展示此消息</string>
+    <string name="messagenotifyfragment_tz">通知</string>
+    <string name="messagenotifyfragment_gg">公告</string>
+    <string name="message_notify_tz_Details">通知详情</string>
+    <string name="message_notify_gg_Details">公告详情</string>
+    <string name="mine_update_login_pass">修改登录密码</string>
+    <string name="mine_update_pay_pass">修改支付密码</string>
+    <string name="camera_view_title">扫描二维码</string>
+
+    <string name="Revise_pass_success">修改登录密码成功</string>
+    <string name="Revise_paypass_success">修改支付密码成功</string>
+
+    <string name="editor_user_photo">设置头像</string>
+    <string name="editor_user_nickname">修改昵称</string>
+    <string name="editor_input_nickname">请输入昵称</string>
+    <string name="editor_user_nickname_error_tip">请输入正确昵称</string>
+
+    <string name="face_upload_idcard">上传身份证</string>
+    <string name="face_identify">视频认证</string>
+    <string name="face_manual_review">人工审核</string>
+    <string name="face_sfz_info">身份信息</string>
+    <string name="face_idcard_name">姓名</string>
+    <string name="face_idcard_name_symbol">姓名:</string>
+    <string name="face_idcard_num">身份证号</string>
+    <string name="face_idcard_nume_symbol">身份证号码:</string>
+    <string name="face_identify_read_tip">请本人操作，并按提示读出数字</string>
+    <string name="face_artificial_fail_tip">审核未通过，认证失败</string>
+    <string name="face_artificial_ing_tip">请稍等，人工审核中……</string>
+    <string name="face_audioVideo_tip">录音录像</string>
+
+    <string name="addwallet_title">添加收付款</string>
+    <string name="wallet_title">收付款管理</string>
+    <string name="wallet_alipay_title">支付宝账号</string>
+    <string name="wallet_bank_title">银行账号</string>
+    <string name="wallet_edit_input_alipay">请输入支付宝账号</string>
+    <string name="wallet_edit_input_bank">请输入银行账号</string>
+    <string name="wallet_upload_Receipt_Code">上传收款码</string>
+    <string name="wallet_upload_my_Receipt_Code">上传我的收款码</string>
+    <string name="wallet_choose_bank">选择银行</string>
+    <string name="feedback_choose_id">选择反馈类型</string>
+    <string name="wallet_add_bank_tip">请添加买币卖币交易的收付款账号</string>
+    <string name="wallet_add_bank">添加收付款</string>
+    <string name="about_activity_title">关于我们</string>
+    <string name="DepositSh_title">商户存款</string>
+
+    <string name="buy_center_title">交易大厅</string>
+    <string name="sell_center_title">卖币</string>
+    <string name="sell_center_success_tip">挂单成功</string>
+    <string name="my_order_title">我的订单</string>
+    <string name="wallet_record_title">钱包记录</string>
+    <string name="wallet_record_details_title">钱包详情</string>
+    <string name="order_buy_title">购买</string>
+    <string name="order_details_title">订单信息</string>
+    <string name="help_center_title">帮助中心</string>
+    <string name="trade_dispute">交易纠纷</string>
+    <string name="order_details_money_tip">数量(KKG)</string>
+    <string name="sell_finish_details_money_one_tip">挂单数量(KKG)</string>
+    <string name="sell_finish_details_money_two_tip">出售数量(KKG)</string>
+    <string name="sell_details_moneytwo_sale_tip">可售数量(KKG)</string>
+    <string name="sell_details_moneytwo_deal_tip">已出售数量(KKG)</string>
+    <string name="sell_details_moneytwo_cancel_tip">已取消数量(KKG)</string>
+    <string name="order_details_trade_post_bal_tip">交易后余额</string>
+    <string name="order_details_trade_orderno">订单号</string>
+    <string name="order_details_trade_liushuino">流水号</string>
+    <string name="mysell_orderno">挂单号</string>
+    <string name="order_details_trade_time_tip">完成时间</string>
+
+    <string name="sell_chai_enabled">拆分</string>
+    <string name="sell_chai_unenabled">不拆分</string>
+    <string name="sell_sell_num_tip">可售数量：</string>
+    <string name="sell_et_sell_num_hint">输入出售金额</string>
+    <string name="pay_type_tip">支付方式</string>
+    <string name="sell_type_tip">出售方式</string>
+    <string name="buy_monty_type_tip">购买数量(KKG)</string>
+    <string name="number_tip">数量(KKG)</string>
+    <string name="judge_chai">是否拆分</string>
+    <string name="payment_method">收款方式</string>
+    <string name="Order_details_title">订单信息</string>
+    <string name="My_Sell_Order_details_title">挂单信息</string>
+
+    <string name="Wallet_record_buyCoin">买币</string>
+    <string name="Wallet_record_Merchant_Add">从商户提现加币</string>
+    <string name="Wallet_record_manual_Add">手动充币</string>
+    <string name="Wallet_record_sellCoin">卖币</string>
+    <string name="Wallet_record_Merchant_Sell">向商户充值扣币</string>
+    <string name="Wallet_record_Finish">已完成</string>
+    <string name="Wallet_record_Cancel">已取消</string>
+
+    <string name="guadan_time">挂单时间</string>
+    <string name="buy_item_chai">可拆售</string>
+    <string name="buy_item_nochai">不可拆售</string>
+    <string name="buy_Less_than_zero_tip">该挂单已被购买</string>
+
+    <string name="buy_coin_allNum">可购总数(KKG):</string>
+    <string name="buy_coin_isChai_tip">是否拆分购买:</string>
+    <string name="buy_coin_percentage_tip">待售</string>
+    <string name="buy_announcement_title">公告</string>
+    <string name="buy_announcement_content">确认打币之前，一定要核实自己的银行、微信、支付宝是否到账再点击打币，禁止私下添加好友，否则造成资金被骗，我司概不负责!</string>
+
+    <string name="order_detail_progress_one_tip">发起订单</string>
+    <string name="order_detail_progress_two_tip">卖家确认</string>
+    <string name="order_detail_progress_thr_tip">买家已转账</string>
+    <string name="order_detail_progress_four_tip">卖家已打币</string>
+    <string name="Order_detail_cancel">订单已取消</string>
+    <string name="Order_detail_buyjia_upload_payzm_tip">买家上传支付凭证</string>
+    <string name="Order_detail_buyjia_upload_payzm_yzz_tip">凭证已选择,请点击下方我已转账</string>
+    <string name="Order_detail_seller_order_tip_0">请您在%1$s分钟内点击确认交易，否则可能会被列为风险账号</string>
+    <string name="Order_detail_buyer_order_tip_0">请您耐心等待，卖家若在%1$s分钟内未确认交易，此订单将被自动取消</string>
+    <string name="Order_detail_seller_order_tip_1">请您耐心等待，买家若在%1$s分钟内未确认转账，此订单将被自动取消</string>
+    <string name="Order_detail_buyer_order_tip_1">请您在%1$s分钟内完成付款并点击我已转账，否则可能会被列为风险账号</string>
+    <string name="Order_detail_seller_order_tip_2">请您在%1$s分钟内确认打币，否则可能会被列为风险账号</string>
+    <string name="Order_detail_buyer_order_tip_2">请您耐心等待，若在%1$s分钟后未收到币，请再联系客服</string>
+    <string name="Order_detail_selljia_sell_paypz_tip">点击查看凭证</string>
+    <string name="Order_detail_buyjia_buy_paypz_tip">查看凭证</string>
+    <string name="Order_detail_selljia_collenction_tip">卖家收款信息</string>
+    <string name="Order_detail_buyjia_collenction_tip">买家付款信息</string>
+    <string name="Order_detail_buyjia_pingzeng_tip">付款凭证</string>
+    <string name="Order_detail_selljia_pingzeng_tip">收款凭证</string>
+    <string name="Order_detail_photo_detail_title">支付凭证</string>
+    <string name="Order_detail_maijia_cancel_order_tip">是否确定取消该订单</string>
+    <string name="Order_detail_createTime_tip">创建时间</string>
+    <string name="Order_detail_CancelTime_tip">取消时间</string>
+
+    <string name="feedback_choose_types">请选择反馈类型</string>
+    <string name="feedback_input_content">请输入您要反馈的内容</string>
+    <string name="feedback_success">反馈成功</string>
+    <string name="FeedBack_types">反馈类型</string>
+    <string name="FeedBack_content">反馈信息</string>
+    <string name="feeback_detail_et_hint">请输入消息内容</string>
+
+    <string name="scan_detail_pay_money_tip">支付金额（KKG）</string>
+    <string name="dialog_no_receive_money_tip">没有收到钱</string>
+    <string name="dialog_receive_money_tip">我已收到钱</string>
+    <string name="coins_release_buyer_tip">放币给买家</string>
+
+    <string name="order_schedule_tip">交易进度</string>
+    <string name="order_callother_tip">呼叫对方</string>
+
+    <string name="notify_order_title">订单提醒</string>
+    <string name="notify_order_cancel">订单已被取消</string>
+    <string name="notify_order_queren">请尽快确认交易</string>
+    <string name="notify_order_fukuanzhuanzhang">请尽快线下付款并提交已转账</string>
+    <string name="notify_order_dabi">请尽快打币</string>
+    <string name="notify_order_zanting">卖家暂停打币,请联系客服</string>
+    <string name="notify_order_yidabi">卖家已打币,请查收</string>
+    <string name="notify_order_xxIscancel">订单：%1$s已被取消</string>
+
+
+    <string name="notify_notify_title">订单确认</string>
+    <string name="notify_notify_queren">订单:KK%1$s已生成,请尽快确认交易</string>
+    <string name="notify_notify_xianxiafukuan">订单:KK%1$s已确认,请及时线下付款</string>
+    <string name="notify_notify_dabi">订单:KK%1$s已付款,请尽快打币</string>
+    <string name="notify_notify_zanting">订单:KK%1$s暂停打币,请联系客服</string>
+    <string name="notify_notify_yidabi">订单:KK%1$s已打币,请查收</string>
+    <string name="notify_notify_yicancel">订单:KK%1$s已被取消</string>
+
+    <string name="wallet_not_sell_money_tip">不可售金额：</string>
+    <string name="wallet_can_sell_money_tip">可售金额：</string>
+
+    <string name="depositsh_kkpay_account_tip">KKpay账户</string>
+    <string name="depositsh_input_sh_account_tip">请输入商户钱包地址</string>
+    <string name="depositsh_input_wj_account_tip">请输入充值玩家账号</string>
+    <string name="depositsh_choose_sh_account_tip">请先选择商户钱包地址</string>
+    <string name="depositsh_search_name_tip">请输入商户名称</string>
+    <string name="depositsh_search_wj_name_tip">请输入%1$s玩家账号查询</string>
+    <string name="depositsh_input_save_money_tip">请输入存款金额</string>
+    <string name="depositsh_view_Tips">温馨提示：为保障您的资金安全，存款之前请确认商户和充值玩家账号，资金一旦转出本平台概不负责。</string>
+    <string name="depositsh_sh_title">商户钱包地址</string>
+    <string name="depositsh_wj_title">%1$s玩家账号</string>
+    <string name="depositsh_addwj_title_tip">添加玩家账号</string>
+    <string name="depositsh_wj_empty_tip">玩家账号</string>
+    <string name="depositsh_save_wj_title">充值玩家</string>
+    <string name="depositsh_save_money_tip">存款金额</string>
+    <string name="Depositsh_allMonty_tip">可存款余额</string>
+
+    <string name="managesh_view_title">商户管理</string>
+    <string name="managesh_view_tip">请添加需要存款且已接入KKpay的商户</string>
+    <string name="managesh_add_tip">添加商户</string>
+    <string name="managesh_Setting_acount_tip">添加玩家账号</string>
+    <string name="managesh_already_added_tip">已添加商户玩家账号</string>
+
+    <string name="addManagesh_view_title">添加商户</string>
+    <string name="addManagesh_input_sh_account_tip">请输入商户钱包地址</string>
+    <string name="addManagesh_input_wj_account_tip">请输入玩家账号</string>
+    <string name="addManagesh_scan_qrtext_tip">扫码商户二维码</string>
+    <string name="addManagesh_view_Tips">温馨提示：为便捷玩家充值，享受商户提供更优质的服务，玩家可在KKpay客户端给商户存款，请联系商户客服提供商户账号或者二维码。</string>
+
+    <string name="ScanManagesh_detail_title">商户详情</string>
+    <string name="ScanManagesh_detail_tip">商户信息</string>
+    <string name="ScanManagesh_detail_Business_Name">商户名称</string>
+    <string name="ScanManagesh_detail_QR_code">商户二维码</string>
+
+    <string name="setManagesh_view_tip">输入玩家账号请点击「天机」,再点击「确认」。</string>
+    <string name="setManagesh_listview_tip">已添加商户玩家账号</string>
+    <string name="setManagesh_view_title">设置玩家账号</string>
+
+    <string name="home_top_help_tutorial">点击此处查看新手教程</string>
+
+    <string name="managesh_address_book_title">商户通讯录</string>
+    <string name="player_view_title">%1$s玩家通讯录</string>
+    <string name="player_text_tip">已添加%1$s玩家账号</string>
+    <string name="DepositSh_success_tip">商户存款成功</string>
+    <string name="Start_Browser_Url_Empty_Tip">网址不能为空.</string>
+    <string name="AddSh_boundAddress_tip">已绑定过该钱包.</string>
+
+    <string name="confirm_deletion_dialog_title_Tip">确认删除</string>
+    <string name="confirm_deletion_sh_dialog_content_Tip">删除后，该商户将被移除商户通讯录</string>
+    <string name="confirm_deletion_wj_dialog_content_Tip">删除后，该玩家将被移除玩家通讯录</string>
+
+    <string name="merchant_name">商户名称</string>
+    <string name="pendingorder_or_order_underway">挂单/订单进行中</string>
+    <string name="merchant_bind">商户绑定</string>
+    <string name="apply_user">申请使用</string>
+    <string name="get_your_kkpay_wallet_address">获取你的KKPAY钱包地址</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="transfer_money_please_check_seller_payment_information">(转账时请核对卖家收款信息)</string>
+    <string name="photo_preview">照片预览</string>
+    <string name="identity_card_front">身份证正面</string>
+    <string name="identity_card_back">身份证背面</string>
+    <string name="identity_info_and_input_mismatch">身份证信息与输入信息不匹配</string>
+    <string name="identity_info_and_portrait_mismatch">身份证照片模糊或相似度太低，请重新上传</string>
+    <string name="please_fill_your_real_name">请填写本人真实姓名</string>
+    <string name="please_fill_your_real_id_card_no">请填写本人真实身份证号码</string>
+    <string name="identity_card_info_error_please_check">身份证号码错误，请核对后更正</string>
+    <string name="identity_verify_success">实名认证成功</string>
+    <string name="verify_fail_please_try_later">核对结果失败，请稍后再试</string>
+</resources>

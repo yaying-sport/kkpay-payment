@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        android:id="@+id/iv_loading"
+        app:hl_layoutBackground="@color/loading_bg"
+        app:hl_cornerRadius="16dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+
+        <com.opensource.svgaplayer.SVGAImageView
+            android:layout_gravity="center"
+            app:source="s/loading.svga"
+            app:autoPlay="true"
+            app:clearsAfterStop="true"
+            app:loopCount="0"
+            android:layout_width="66dp"
+            android:layout_height="60dp" />
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+    <TextView
+        skin:enable="true"
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/loading_dialog"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+</LinearLayout>

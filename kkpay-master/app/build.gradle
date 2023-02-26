@@ -1,0 +1,177 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.ke.gson.plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply from: 'skin.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def librarys = rootProject.ext.dependencies
+//编译打包时间
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_HH:mm:ss", TimeZone.getTimeZone("Asia/Shanghai"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        multiDexEnabled true
+//        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+//        versionCode rootProject.ext.versionCode
+//        versionName rootProject.ext.versionName
+        ndk {
+            /**方案一：只适配armeabi
+
+             优点:基本上适配了全部CPU架构（除了淘汰的mips和mips_64）
+             缺点：性能低，相当于在绝大多数手机上都是需要辅助ABI或动态转码来兼容
+
+             方案二：只适配 armeabi-v7a
+
+             同理方案一，只是又筛掉了一部分老旧设备,在性能和兼容二者中比较平衡
+
+             方案三: 只适配 arm64-v8
+
+             优点: 性能最佳
+             缺点： 只能运行在arm64-v8上，要放弃部分老旧设备用户
+
+             使用与米6相同配置
+             */
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
+        flavorDimensions "app"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        jumboMode = true
+
+        javaMaxHeapSize "4g"
+
+    }
+
+    //这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+
+    }
+//    //设置keystore
+    signingConfigs {
+        kkpay {
+            storeFile file('E:\\AAAKeyStore\\KeyStore\\20220315\\kkpay\\kkpayStore.jks')
+            storePassword '951357'
+            keyAlias 'kkpay'
+            keyPassword '951357'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true// 是否进行混淆 建议也把混淆开着 方便调试发现问题
+            proguardFile 'proguard.cfg'// 混淆文件的位置
+            shrinkResources true    //移除无用的Resource
+            manifestPlaceholders = [RELEASE_TIME: releaseTime()]
+//***************************************************************************
+            /**
+             * debug版本需要 ** 手动 ** 修改签名信息
+             */
+            signingConfig signingConfigs.kkpay
+        }
+        release {
+            minifyEnabled true //是否进行混淆
+            proguardFile 'proguard.cfg'// 混淆文件的位置
+            shrinkResources true    //移除无用的Resource
+            manifestPlaceholders = [RELEASE_TIME: releaseTime()]
+        }
+    }
+
+    productFlavors {
+        kkpay {
+            applicationId = 'com.kkpayworld'//包名
+            versionCode = 5
+            versionName = '1.1.3'
+            String appName = 'KKPay'
+            signingConfig signingConfigs.kkpay
+            resValue 'string', 'my_app_name', appName
+            manifestPlaceholders = [APP_NAME: appName,//应用名
+                                    APP_ICON: '@mipmap/ic_launcher',//应用logo
+            ]
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res']
+        }
+    }
+
+    packagingOptions {
+        doNotStrip "**/libDX*.so"
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+    implementation project(':svgalibrary')
+    implementation project(':xpopuplibrary')
+    implementation project(':zxinglite')
+    implementation project(':multilibrary')
+    //顶象验证码
+    implementation(name: 'dx-captcha-1.7.0', ext: 'aar')
+    implementation files('libs/dx-risk-v5.9.3r.a49737b5.jar')
+    implementation(name: 'HTTPDNS_Android_v3.8.0a_release', ext: 'aar')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.android.support:percent:28.0.0'
+    implementation 'org.apache.commons:commons-text:1.1'
+    librarys.each { k, v ->
+        switch (k) {
+            case 'junit':
+                testImplementation v
+                break
+            case 'runner':
+            case 'espresso':
+                androidTestImplementation v
+                break
+            case 'glide-compiler':
+            case 'butterknife-compiler':
+                annotationProcessor v
+                break
+            default:
+                implementation v
+                break
+        }
+        api('com.davemorrissey.labs:subsampling-scale-image-view:3.10.0') {
+            exclude group: 'com.android.support'
+            exclude module: 'appcompat-v7'
+            exclude module: 'support-v4'
+        }
+    }
+
+    //1. 云刷脸SDK
+    implementation(name: 'WbCloudFaceLiveSdk-v4.5.4.0-373fcb31', ext: 'aar')
+    //2. 云common SDK
+    implementation(name: 'WbCloudNormal-v5.1.3-0f08e6d', ext: 'aar')
+
+
+}

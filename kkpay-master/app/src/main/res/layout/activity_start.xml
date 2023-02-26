@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/startWelcome">
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:autoPlay="true"
+        app:clearsAfterDetached="false"
+        app:clearsAfterStop="false"
+        app:loopCount="1"
+        app:source="s/start.svga" />
+
+    <RelativeLayout
+        android:id="@+id/rl_ad_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+
+        <com.kaiserkalep.widgets.CustomViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginTop="38dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/shape_ad_guide_sikp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/start_time"
+            android:textSize="15dp"
+            tools:text="SSSS" />
+
+        <View
+            android:id="@+id/view_click_time"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

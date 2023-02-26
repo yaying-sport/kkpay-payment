@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kaiserkalep">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!--震动-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--响铃-->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--亮屏-->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!---->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--锁屏点亮屏幕权限-->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <uses-permission
+        android:name="android.permission.GET_TOP_ACTIVITY_INFO"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <!--android 8.0 未知应用的安装权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="android.permission.INTERACT_ACROSS_USERS"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        android:protectionLevel="signature" />
+
+    <!-- 访问网络. 某些位置信息需要从网络服务器获取 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问WiFi状态. 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 修改WiFi状态. 发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 访问网络状态, 检测网络的可用性. 需要网络运营商相关信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 访问手机当前状态, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-sdk tools:overrideLibrary="com.tencent.cloud.huiyansdkface.wecamera"/>
+
+    <meta-data
+        android:name=".widgets.glide.OkHttpGlideModule"
+        android:value="AppGlideModule" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="${APP_ICON}"
+        android:label="${APP_NAME}"
+        android:largeHeap="true"
+        android:maxAspectRatio="2.4"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme,android:icon,android:label,android:allowBackup"
+        tools:targetApi="n">
+
+        <!-- 停用 WebView 安全浏览检查-->
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            tools:replace="android:value"
+            android:value="false" />
+
+        <!--停用 WebView 诊断数据上传到 Google -->
+        <meta-data
+            android:name="android.webkit.WebView.MetricsOptOut"
+            android:value="true" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!-- 适配全面屏手机 -->
+        <meta-data
+            android:name="android.max_aect"
+            android:value="2.4" />
+
+        <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <!-- 打包时间 -->
+        <meta-data
+            android:name="releaseTime"
+            android:value="${RELEASE_TIME}" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".utils.update.DownloadFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/update_file_path" />
+        </provider>
+
+        <receiver android:name=".utils.update.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".service.KKpayBroadCastReceiver">
+            <intent-filter>
+                <action android:name="com.KKpayBroadCast.intent.action" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".service.PollingReceiver">
+            <intent-filter>
+                <action android:name="com.KKpayBroadCast.service.PollingUtils" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.NetWorkService" />
+        <service android:name=".service.StartAdService" />
+        <service
+            android:name=".service.KKpayBackgroundService"
+            android:priority="1000" />
+        <service
+            android:name=".service.PollingService"
+            android:priority="1000" />
+
+
+        <activity
+            android:name=".ui.activity.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="登录"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/LoginActivity"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.VerifyNewActivity"
+            android:label="设备效验"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/VerifyNewActivity"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:label="注册"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/RegisterActivity"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="首页"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainHomeStyle">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="false" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/MainActivity"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:label="设置"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="false" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/SettingActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.EditorUserDataActivity"
+            android:label="编辑用户信息"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="false" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/EditorUserDataActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.FindPasswordActivity"
+            android:label="找回登录密码"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="false" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/FindPasswordActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MessageNotifyActivity"
+            android:label="消息通知公告"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/MessageNotifyActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MessageNotifyDetailActivity"
+            android:label="消息/公告详情"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/MessageNotifyDetailActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ModifyLoginPassActivity"
+            android:label="修改登录密码"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ModifyLoginPassActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ModifyPayPassActivity"
+            android:label="修改支付密码"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ModifyPayPassActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.FeedbackActivity"
+            android:label="意见反馈"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/FeedbackActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MyFeedbackActivity"
+            android:label="我的反馈"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/MyFeedbackActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.FeedBackDetailActivity"
+            android:label="反馈详情"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/FeedBackDetailActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.VerifyFaceActivity"
+            android:label="实名认证"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/VerifyFaceActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.AddWalletManageActivity"
+            android:label="添加收付款"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/AddWalletManageActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WalletManageActivity"
+            android:label="收付款管理"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/WalletManageActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.BuyCoinCenterActivity"
+            android:label="买币中心"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/BuyCoinCenterActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.BuyCoinActivity"
+            android:label="购买"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/BuyCoinActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SellCoinCenterActivity"
+            android:label="卖币"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/SellCoinCenterActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.SellCoinDetailsActivity"
+            android:label="卖币完成"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/SellCoinDetailsActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MyOrderActivity"
+            android:label="我的订单"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/MyOrderActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WalletRecordActivity"
+            android:label="钱包记录"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/WalletRecordActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WalletRecordDetailsActivity"
+            android:label="钱包记录详情"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/WalletRecordDetailsActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.OrderDetailsActivity"
+            android:label="订单详情"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/OrderDetailsActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.PhotoDetailActivity"
+            android:label="支付凭证"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/PhotoDetailActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ServiceActivity"
+            android:label="客服中心"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ServiceActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:label="关于我们"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/AboutActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.DepositShActivity"
+            android:label="商户存款"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/DepositShactivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ManageShActivity"
+            android:label="商户管理"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ManageShactivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.AddManageShActivity"
+            android:label="添加商户"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/AddManageShActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.AddShAcountDetailActivity"
+            android:label="添加商户"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/AddShAcountDetailActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ManageShSettingActivity"
+            android:label="商户管理"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ManageShSettingActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MerchantDirectoryActivity"
+            android:label="商户通讯录"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/MerchantDirectoryActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.PlayerAddressActivity"
+            android:label="玩家通讯录"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/PlayerAddressActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ui.activity.CameraCaptureActivity"
+            android:label="二维码"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/CameraCaptureActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ScanCallbackJumpActivity"
+            android:label="扫码回调"
+            android:launchMode="singleTask"
+            android:theme="@style/ScanCallbackJumpStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/scheme_host"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/scheme_bind"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ScanShCallbackJumpActivity"
+            android:label="扫码回调"
+            android:launchMode="singleTask"
+            android:theme="@style/ScanCallbackJumpStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/scheme_sh_host"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ScanDetailActivity"
+            android:label="我的订单"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ScanDetailActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".ui.activity.ScanBindActivity"
+            android:label="商户绑定"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/ScanBindActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:label="webView"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified">
+            <meta-data
+                android:name="@string/loginTag"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/WebViewActivity"
+                    android:scheme="@string/scheme"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+
+</manifest>

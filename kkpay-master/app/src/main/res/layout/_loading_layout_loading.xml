@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        android:id="@+id/iv_image_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:hl_cornerRadius="16dp"
+        app:hl_layoutBackground="@color/loading_bg">
+
+
+        <com.opensource.svgaplayer.SVGAImageView
+            android:id="@+id/svga_loading"
+            android:layout_width="66dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:clearsAfterDetached="false"
+            app:clearsAfterStop="false"
+            app:loopCount="0" />
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+    <!--    <com.yaying.widgets.AdaptiveImageView-->
+    <!--        android:visibility="gone"-->
+    <!--        tools:visibility="visible"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        skin:enable="true"-->
+    <!--        android:background="@color/main_bg"-->
+    <!--        android:id="@+id/iv_bg_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content" />-->
+
+</LinearLayout>

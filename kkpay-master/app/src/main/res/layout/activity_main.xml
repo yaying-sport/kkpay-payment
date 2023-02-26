@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/main_home_tab_item_height"
+        android:layout_height="match_parent">
+
+        <com.kaiserkalep.widgets.NoAnimationViewPager
+            android:id="@+id/cvp_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shape_main_tab_shadow" />
+
+    </FrameLayout>
+
+    <com.kaiserkalep.widgets.MainHomeBottomTab
+        android:id="@+id/magic_indicator"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/main_home_tab"
+        android:background="@color/no_color"
+        android:elevation="14dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="255dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_pick_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/view_title_bg"
+    android:orientation="vertical">
+
+    <!--此部分需要完整复制过去，删减或者更改ID会导致初始化找不到内容而报空-->
+    <LinearLayout
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:id="@+id/timepicker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.kaiserkalep.widgets.pickerview.contrarywind.view.WheelView
+            android:id="@+id/year"
+            app:wheelview_textSize="23dp"
+            app:wheelview_textColorOut="@color/select_record_out"
+            app:wheelview_textColorCenter="@color/select_record_center"
+            app:wheelview_lineSpacingMultiplier="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.kaiserkalep.widgets.pickerview.contrarywind.view.WheelView
+            android:id="@+id/month"
+            app:wheelview_textSize="23dp"
+            app:wheelview_textColorOut="@color/select_record_out"
+            app:wheelview_textColorCenter="@color/select_record_center"
+            app:wheelview_lineSpacingMultiplier="1"
+            app:wheelview_need_zero="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.kaiserkalep.widgets.pickerview.contrarywind.view.WheelView
+            android:id="@+id/day"
+            app:wheelview_textSize="23dp"
+            app:wheelview_textColorOut="@color/select_record_out"
+            app:wheelview_textColorCenter="@color/select_record_center"
+            app:wheelview_lineSpacingMultiplier="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <com.kaiserkalep.widgets.pickerview.contrarywind.view.WheelView
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.kaiserkalep.widgets.pickerview.contrarywind.view.WheelView
+            android:id="@+id/min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.kaiserkalep.widgets.pickerview.contrarywind.view.WheelView
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:background="@color/pick_time_cancel_bg"
+            android:id="@+id/tv_cancel"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="@color/pick_time_cancel_text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:background="@color/pick_time_confirm_bg"
+            android:gravity="center"
+            android:id="@+id/tv_finish"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textColor="@color/pick_time_confirm_text"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

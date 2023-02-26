@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--友盟配置-->
+    <string name="UMengKey_test">62380ae1317aa87760a77388</string>
+    <string name="UMengKey_release">62380b70317aa87760a773c0</string>
+
+    <string name="bugly_key_test">3aac286213</string>
+    <string name="bugly_key_release">8c6a07acdb</string>
+
+    <string name="env_mode">0</string>//应用环境 0,测试 1,预发布 2,线上
+    <string name="scheme">kkpay</string>//路由
+    <string name="scheme_host">pay</string>//路由host
+    <string name="scheme_sh_host">agent</string>//商户路由host
+    <string name="scheme_bind">bind</string>//商户授权绑定
+
+    <string name="status_bar_text_color">0</string>//状态栏颜色 0,黑色 1,白色
+    <string name="user_agent">ua_kkpay_app</string>//webView ua头
+    //腾讯人类识别license
+    <string name="verify_face_license_debug">WJgPhChgPKZfZ4J3CoBPVnLCZEDZ76hYM07omPXOd5uUAWOfnVOE0lRj5AniUaMIbluBdnGbTz76L4nBb17zWfqi2Pyycr2cxv4cVQEV4E9iShi69vR7ti0isuWMwHQUCCpbvLkEQplLyJurMKArLttr9Jnnv803ckn5Y9Da/ysjcu1ur9JklF0ycg9tRftuLBSJZhnt188mpQJgEh6rAZxkY+moM5zL37Pt5bV2M0AJCVVjFGxjAfO+TIwqlmNf9CVDuh3Iv1/e0fVBbFpEHNUn2tB3Kb63WisovjnQ8keoEbRq/cBivwsn6RISkUIqA8z+aoHZu+vEfL4aDVHG7Q==</string>
+    <string name="verify_face_license_release">P58t+BIvZFKzM58wXVYTY96yKXfVx8j6e3zBuC+CxkkwmBKQNrtFaMPqfptbrAQ86fwtJo5+vl0FsFPxoD7jTA5y88KtSQFNtZNSezg5b6LNERb/oTSTLnQ7K++daQoCTHugQ/73MtJN2Dx/qK+Y8To8sdr8nEmURviuD8CliQojcu1ur9JklF0ycg9tRftuLBSJZhnt188mpQJgEh6rAZxkY+moM5zL37Pt5bV2M0AJCVVjFGxjAfO+TIwqlmNf9CVDuh3Iv1/e0fVBbFpEHNUn2tB3Kb63WisovjnQ8keoEbRq/cBivwsn6RISkUIqA8z+aoHZu+vEfL4aDVHG7Q==</string>
+
+</resources>

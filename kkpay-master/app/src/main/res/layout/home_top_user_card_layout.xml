@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_viewgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="1dp"
+            android:paddingStart="17dp"
+            android:paddingLeft="17dp">
+
+            <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                android:id="@+id/sl_user_photo"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_marginEnd="14dp"
+                app:clickable="false"
+                app:hl_cornerRadius="32dp"
+                app:hl_layoutBackground="@color/home_default_photo_bg">
+
+                <ImageView
+                    android:id="@+id/iv_user_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_default_photo" />
+
+            </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/sl_user_photo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/home_welcome"
+                    android:textColor="@color/home_welcome_userid"
+                    android:textSize="15dp" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_userid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:textColor="@color/home_welcome_userid"
+                    android:textSize="11dp"
+                    tools:text="111112345678" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_userid_verfiy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/home_first_verified"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_level"
+                    android:layout_width="21dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="6dp"
+                    tools:src="@drawable/icon_user_logo" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_over"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/sl_user_photo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/home_balance"
+                    android:textColor="@color/home_welcome_userid"
+                    android:textSize="15dp" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_toStartOf="@+id/tv_money_tip"
+                    android:layout_toLeftOf="@+id/tv_money_tip"
+                    android:gravity="bottom"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/home_Wallet_Type"
+                    android:textSize="27dp"
+                    tools:text="968577.0" />
+
+                <com.kaiserkalep.widgets.BoldTextView
+                    android:id="@+id/tv_money_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/home_wallet_tip"
+                    android:textColor="@color/home_Wallet_Type"
+                    android:textSize="8dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_home_user_address_bg">
+
+            <ImageView
+                android:id="@+id/iv_address_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="9dp"
+                android:src="@drawable/icon_home_address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/iv_address_icon"
+                android:layout_toRightOf="@+id/iv_address_icon"
+                android:text="@string/home_wallet_address_tip"
+                android:textColor="@color/home_Wallet_address_text_color"
+                android:textSize="9dp" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/home_Wallet_address_text_color"
+                android:textSize="9dp"
+                tools:text="2e1774c17adfd327" />
+
+
+            <ImageView
+                android:id="@+id/iv_copy_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="9dp"
+                android:padding="5dp"
+                android:src="@drawable/icon_home_copy" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</merge>

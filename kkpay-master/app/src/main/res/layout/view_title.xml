@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/view_title_bg"
+    skin:enable="true">
+
+
+    <com.kaiserkalep.widgets.BoldTextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:padding="10dp"
+        android:textColor="@color/view_title_back"
+        android:textSize="16dp"
+        skin:enable="true"
+        tools:text="boldTv_left" />
+
+
+    <com.kaiserkalep.widgets.BoldTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/view_title_title"
+        android:textSize="17dp"
+        skin:enable="true"
+        tools:text="BoldTv_center" />
+
+
+    <TextView
+        android:id="@+id/tv_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/view_title_function"
+        android:textSize="15dp"
+        android:visibility="gone"
+        skin:enable="true"
+        tools:text="Tv_right" />
+
+    <View
+        android:id="@+id/view_line_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/comm_title_line"
+        skin:enable="true" />
+
+</RelativeLayout>

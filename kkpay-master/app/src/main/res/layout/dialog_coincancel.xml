@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="267dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_common_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="27dp"
+    skin:enable="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_cancel_coin" />
+
+    <com.kaiserkalep.widgets.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/Tips"
+        android:textColor="@color/sh_m_color"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        skin:enable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/dialog_coin_cancel_content_one_tip"
+        android:textColor="@color/sh_g_color"
+        android:textSize="12dp"
+        skin:enable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/dialog_coin_cancel_content_two_tip"
+        android:textColor="@color/sh_g_color"
+        android:textSize="12dp"
+        skin:enable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.kaiserkalep.widgets.MyOnClickTextView
+            android:id="@+id/tv_cancel"
+            style="@style/dialog_cancel_text_color"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_comm_dialog_cancel"
+            android:gravity="center"
+            android:text="@string/Share_Close"
+            skin:enable="true" />
+
+
+        <com.kaiserkalep.widgets.MyOnClickTextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_ok_style"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/select_comm_dialog_ok"
+            android:gravity="center"
+            android:text="@string/Share_certain"
+            skin:enable="true" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

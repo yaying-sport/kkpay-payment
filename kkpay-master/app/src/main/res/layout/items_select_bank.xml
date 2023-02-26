@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/select_bank_dialog_bg"
+    android:paddingLeft="20dp"
+    android:layout_height="50dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+
+        <ImageView
+            android:scaleType="fitXY"
+            tools:src="@drawable/icon_bank_logo"
+            android:id="@+id/iv_bank_logo"
+            android:layout_centerVertical="true"
+            android:layout_width="23dp"
+            android:layout_height="23dp" />
+
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/iv_bank_logo"
+            android:id="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/select_bank_list_name"
+            android:textSize="16dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:padding="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_select_check"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line_vertical"
+        android:id="@+id/view_line" />
+
+</LinearLayout>

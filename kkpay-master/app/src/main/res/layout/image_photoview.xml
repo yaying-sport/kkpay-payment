@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kaiserkalep.widgets.LoadingLayout
+        android:id="@+id/photo_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:needRemoveChild="false">
+
+        <com.kaiserkalep.widgets.PhotoView.PhotoView
+            android:id="@+id/iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </com.kaiserkalep.widgets.LoadingLayout>
+
+    <ImageView
+        android:id="@+id/iv_error"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:background="@drawable/error"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_press_blue_press"
+        android:text="@string/Share_save"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>
+
+

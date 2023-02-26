@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePureScrollMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="9dp"
+                app:hl_cornerRadius="3dp"
+                app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                app:hl_shadowColor="@color/home_shadowColor"
+                app:hl_shadowLimit="0dp"
+                app:hl_shadowOffsetY="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_sh_account_tip"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/depositsh_sh_title"
+                        android:textColor="@color/sh_m_color"
+                        android:textSize="12dp" />
+
+
+                    <com.kaiserkalep.widgets.CleanEditTextView
+                        android:id="@+id/et_sh_account"
+                        style="@style/login_Edit_Style"
+                        android:layout_toEndOf="@+id/tv_sh_account_tip"
+                        android:gravity="center_vertical"
+                        android:hint="@string/addManagesh_input_sh_account_tip"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+            </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/add_sh_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Share_or"
+                    android:textColor="@color/sh_m_color"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/add_sh_line" />
+
+            </LinearLayout>
+
+            <com.kaiserkalep.widgets.shadowLayout.TouchShadowLayout
+                android:id="@+id/sl_click_scan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp"
+                app:hl_cornerRadius="5dp"
+                app:hl_layoutBackground="@color/view_title_bg"
+                app:hl_shadowColor="@color/shadow_layout_color"
+                app:hl_shadowLimit="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/select_comm_dialog_cancel"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/icon_qr_logo" />
+
+                    <com.kaiserkalep.widgets.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addManagesh_scan_qrtext_tip"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+
+
+            </com.kaiserkalep.widgets.shadowLayout.TouchShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/addManagesh_view_Tips"
+                android:textColor="@color/sh_g_color"
+                android:textSize="8dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:id="@+id/sl_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="50dp"
+                    app:clickable="false"
+                    app:hl_bindTextView="@id/tv_text"
+                    app:hl_clickable_text="true"
+                    app:hl_cornerRadius="23dp"
+                    app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+                    app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+                    app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+                    app:hl_textColor="@color/btn_confirm"
+                    app:hl_textColor_true="@color/btn_confirm_true">
+
+                    <TextView
+                        android:id="@+id/tv_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/Share_next_step"
+                        android:textSize="15dp" />
+
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="card_flip_time_full">300</integer>
+    <integer name="card_flip_time_half">150</integer>
+
+    <integer name="animation_default_duration">300</integer>
+
+    <integer name="top_tab_height">50</integer>
+    <integer name="top_list_banner_top">0</integer>
+
+
+    <integer name="wallet_refresh_anim_time">40</integer>
+
+    <integer name="chick_touch_anim">290</integer>
+
+
+    <!--统一弹框背景透明度-->
+    <fraction name="comm_dialog_dim_amount">0.5</fraction>
+    <!--比赛详情页推荐(联赛名称重叠加深背景)-->
+    <fraction name="match_recommend_dialog_dim_amount">0.9</fraction>
+
+</resources>

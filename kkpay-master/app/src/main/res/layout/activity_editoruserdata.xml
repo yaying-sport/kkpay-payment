@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/comm_line2" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePureScrollMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="33dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/editor_user_photo"
+                        android:textColor="@color/editor_text_tip"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_user_portrait"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/icon_default_photo" />
+
+                </LinearLayout>
+
+
+                <View
+                    style="@style/line_vertical"
+                    android:layout_marginLeft="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/editor_user_nickname"
+                        android:textColor="@color/editor_text_tip"
+                        android:textSize="11dp" />
+
+                    <EditText
+                        android:id="@+id/et_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:background="@color/no_color"
+                        android:gravity="center_vertical|end"
+                        android:hint="@string/editor_input_nickname"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:paddingEnd="34dp"
+                        android:textColor="@color/editor_text_tip"
+                        android:textColorHint="@color/editor_edittext_hint_color"
+                        android:textSize="14dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:id="@+id/sl_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="60dp"
+                    app:clickable="false"
+                    app:hl_bindTextView="@id/tv_text"
+                    app:hl_clickable_text="true"
+                    app:hl_cornerRadius="23dp"
+                    app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+                    app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+                    app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+                    app:hl_textColor="@color/btn_confirm"
+                    app:hl_textColor_true="@color/btn_confirm_true">
+
+                    <TextView
+                        android:id="@+id/tv_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/Share_save"
+                        android:textSize="15dp" />
+
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

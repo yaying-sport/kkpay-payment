@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/logo_top_view_height">
+
+        <include layout="@layout/layout_top_logoname_view" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/login_Edit_RelativeLayout_Style"
+        android:layout_marginTop="40dp">
+
+        <View style="@style/login_Line_Style" />
+
+        <ImageView
+            android:id="@+id/login_iv_phone_left"
+            style="@style/login_iv_left_Style"
+            android:src="@drawable/icon_phone_uncheck" />
+
+        <com.kaiserkalep.widgets.CleanEditTextView
+            android:id="@+id/login_et_input_phone"
+            style="@style/login_Edit_Style"
+            android:layout_toEndOf="@+id/login_iv_phone_left"
+            android:layout_toRightOf="@+id/login_iv_phone_left"
+            android:hint="@string/login_edit_input_phone"
+            android:inputType="number"
+            android:maxLength="11" />
+
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/login_Edit_RelativeLayout_Style">
+
+        <View style="@style/login_Line_Style" />
+
+        <ImageView
+            android:id="@+id/login_iv_pass_left"
+            style="@style/login_iv_left_Style"
+            android:src="@drawable/icon_pass_uncheck" />
+
+        <com.kaiserkalep.widgets.PasswordEditTextView
+            android:id="@+id/login_et_input_pass"
+            style="@style/login_Edit_Style"
+            android:layout_toStartOf="@+id/login_iv_pass_right"
+            android:layout_toLeftOf="@+id/login_iv_pass_right"
+            android:layout_toEndOf="@+id/login_iv_pass_left"
+            android:layout_toRightOf="@+id/login_iv_pass_left"
+            android:hint="@string/login_edit_input_pass"
+            android:imeOptions="actionGo"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/login_iv_pass_right"
+            style="@style/login_iv_right_Style"
+            android:src="@drawable/icon_pass_hide" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/login_tv_online_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/login_online_service"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/login_tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/login_forgot_password"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        android:id="@+id/login_sl_login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        app:clickable="false"
+        app:hl_bindTextView="@id/login_tv_logIn_text"
+        app:hl_clickable_text="true"
+        app:hl_cornerRadius="23dp"
+        app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+        app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+        app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+        app:hl_textColor="@color/btn_confirm"
+        app:hl_textColor_true="@color/btn_confirm_true">
+
+        <TextView
+            android:id="@+id/login_tv_logIn_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/login_btn_text"
+            android:textSize="15dp" />
+
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+    <TextView
+        android:id="@+id/login_tv_reg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="10dp"
+        android:text="@string/register_btn_text"
+        android:textColor="@color/reg_btn_color"
+        android:textSize="13dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingBottom="10dp"
+            android:textColor="@color/version_text_color"
+            android:textSize="13dp"
+            tools:text="版本号：V 1.2.1" />
+
+    </FrameLayout>
+
+</LinearLayout>

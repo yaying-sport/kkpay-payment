@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:drawablePadding="5dp"
+    skin:enable="true"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:background="@drawable/shape_share_dialog_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            skin:enable="true"
+            android:id="@+id/custom_share_wechat_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/share_wechat_icon"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:text="微信好友"
+            android:textColor="@color/share_dialog_text"
+            android:textSize="12dp" />
+
+        <TextView
+            skin:enable="true"
+            android:id="@+id/custom_share_friends_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/share_friends_icon"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:text="朋友圈"
+            android:textColor="@color/share_dialog_text"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+
+        <TextView
+            skin:enable="true"
+            android:id="@+id/custom_share_qq_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/share_qq_icon"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:text="QQ好友"
+            android:textColor="@color/share_dialog_text"
+            android:textSize="12dp"
+            android:visibility="visible" />
+
+
+        <TextView
+            skin:enable="true"
+            android:id="@+id/custom_share_copy_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/share_copy_icon"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:text="复制链接"
+            android:textColor="@color/share_dialog_text"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <View
+        skin:enable="true"
+        style="@style/line_vertical"
+        android:background="@color/share_dialog_line" />
+
+    <TextView
+        skin:enable="true"
+        android:id="@+id/custom_share_cancel_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取消"
+        tools:text="werty"
+        android:textColor="@color/share_dialog_cancel"
+        android:textSize="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@color/no_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_more_url"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            tools:text="XXXX" />
+
+    </RelativeLayout>
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="26dp"
+        app:hl_cornerRadius_leftBottom="10dp"
+        app:hl_cornerRadius_rightBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.kaiserkalep.widgets.MaxHeightRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:scrollbars="none"
+                app:maxHeight="400dp" />
+
+        </LinearLayout>
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_close_verify" />
+
+</LinearLayout>

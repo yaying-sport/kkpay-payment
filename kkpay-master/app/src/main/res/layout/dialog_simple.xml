@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_share_dialog_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:minHeight="59dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text=""
+            tools:text="sdfsd"
+            android:textColor="@color/simple_dialog_title"
+            android:textSize="17dp" />
+
+
+        <View
+            android:id="@+id/view_line"
+            style="@style/line_vertical" />
+
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text=""
+            tools:text="sdfsd"
+            android:textColor="@color/simple_dialog_title"
+            android:textSize="17dp" />
+
+
+        <!--<View style="@style/line_vertical" />-->
+
+    </LinearLayout>
+
+
+    <View
+        style="@style/line_vertical"
+        android:layout_height="10dp"
+        android:background="@color/simple_dialog_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/share_dialog_bg">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/Share_cancel"
+            tools:text="sdfsd"
+            android:textSize="17dp"
+            android:textColor="@color/simple_dialog_title" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view_bg">
+
+    <ImageView
+        android:id="@+id/tv_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_service_head" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_below="@+id/tv_statusbar">
+
+        <ImageView
+            android:id="@+id/iv_top_left"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@drawable/icon_top_back_white" />
+
+        <com.kaiserkalep.widgets.BoldTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            tools:text="BoldTv_center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top_bar"
+        android:orientation="vertical">
+
+        <com.kaiserkalep.widgets.MySmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableLoadMore="false"
+            app:srlEnableOverScrollBounce="false"
+            app:srlEnableOverScrollDrag="false"
+            app:srlEnablePureScrollMode="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="@string/depositsh_kkpay_account_tip"
+                            android:textColor="@color/sh_g_color"
+                            android:textSize="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_kk_acount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="3dp"
+                                android:textColor="@color/sh_m_color"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                tools:text="text" />
+
+                            <TextView
+                                android:id="@+id/tv_kk_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/sh_allmoney_color"
+                                android:textSize="12dp"
+                                tools:text="可存款余额：231546 KKG" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/depositsh_choose_sh_account_tip"
+                    android:textColor="@color/sh_g_color"
+                    android:textSize="10dp" />
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="9dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_sh_account_tip"
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="15dp"
+                                android:text="@string/depositsh_sh_title"
+                                android:textColor="@color/sh_g_color"
+                                android:textSize="12dp" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toStartOf="@+id/iv_sh_right_icon"
+                                android:layout_toEndOf="@+id/tv_sh_account_tip">
+
+                                <TextView
+                                    android:id="@+id/tv_acc_hint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/depositsh_input_sh_account_tip"
+                                    android:textColor="@color/sh_hint_color"
+                                    android:textSize="13dp" />
+
+                                <com.kaiserkalep.widgets.CleanEditTextView
+                                    android:id="@+id/et_sh_account"
+                                    style="@style/login_Edit_Style"
+                                    android:gravity="center_vertical"
+                                    android:maxLength="30"
+                                    android:maxLines="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/sh_hint_color"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_sh_right_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:src="@drawable/icon_sh_right" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0.5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/add_sh_line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Share_or"
+                                android:textColor="@color/sh_m_color"
+                                android:textSize="12dp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0.5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/add_sh_line" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_scan_camera"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/select_scan_camera_pressed"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="17dp">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/icon_qr_logo" />
+
+                            <com.kaiserkalep.widgets.BoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/addManagesh_scan_qrtext_tip"
+                                android:textColor="@color/click_btn_bg_end"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="9dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_wj_account_tip"
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="15dp"
+                                android:text="@string/depositsh_save_wj_title"
+                                android:textColor="@color/sh_g_color"
+                                android:textSize="12dp" />
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toStartOf="@+id/iv_wj_right_icon"
+                                android:layout_toEndOf="@+id/tv_wj_account_tip">
+
+                                <TextView
+                                    android:id="@+id/tv_wj_hint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/depositsh_input_wj_account_tip"
+                                    android:textColor="@color/sh_hint_color"
+                                    android:textSize="13dp" />
+
+                                <com.kaiserkalep.widgets.CleanEditTextView
+                                    android:id="@+id/et_wj_account"
+                                    style="@style/login_Edit_Style"
+                                    android:maxLength="32"
+                                    android:maxLines="1"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/sh_hint_color"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </FrameLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_wj_right_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:src="@drawable/icon_wj_right" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="9dp"
+                    app:hl_cornerRadius="3dp"
+                    app:hl_layoutBackground="@drawable/shape_rectangle_white_bg"
+                    app:hl_shadowColor="@color/home_shadowColor"
+                    app:hl_shadowLimit="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/depositsh_save_money_tip"
+                            android:textColor="@color/sh_g_color"
+                            android:textSize="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="23dp"
+                                android:layout_marginStart="19dp"
+                                android:layout_marginEnd="46dp"
+                                android:background="@drawable/icon_kkg" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tv_hint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/depositsh_input_save_money_tip"
+                                    android:textColor="@color/sh_hint_color"
+                                    android:textSize="20dp" />
+
+                                <com.kaiserkalep.widgets.CleanEditTextView
+                                    android:id="@+id/et_money"
+                                    style="@style/login_Edit_Style"
+                                    android:background="@color/no_color"
+                                    android:inputType="number"
+                                    android:maxLength="15"
+                                    android:paddingEnd="15dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="30dp"
+                                    tools:ignore="RtlSymmetry" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/depositsh_view_Tips"
+                    android:textColor="@color/sh_g_color"
+                    android:textSize="9dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+                        android:id="@+id/sl_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="50dp"
+                        app:clickable="false"
+                        app:hl_bindTextView="@id/tv_text"
+                        app:hl_clickable_text="true"
+                        app:hl_cornerRadius="23dp"
+                        app:hl_layoutBackground="@drawable/shape_login_btn_bg"
+                        app:hl_layoutBackground_clickFalse="@drawable/shape_login_btn_bg_false"
+                        app:hl_layoutBackground_true="@drawable/shape_login_btn_bg_true"
+                        app:hl_textColor="@color/btn_confirm"
+                        app:hl_textColor_true="@color/btn_confirm_true">
+
+                        <TextView
+                            android:id="@+id/tv_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/Share_certain"
+                            android:textSize="15dp" />
+
+                    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </com.kaiserkalep.widgets.MySmartRefreshLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

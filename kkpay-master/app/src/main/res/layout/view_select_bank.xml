@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.kaiserkalep.widgets.shadowLayout.ShadowLayout
+        app:hl_cornerRadius_rightTop="10dp"
+        app:hl_layoutBackground="@color/select_bank_dialog_bg"
+        app:hl_cornerRadius_leftTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:text="@string/Share_cancel"
+                    android:textColor="@color/view_select_back_cacal"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_choose_bank"
+                    android:textColor="@color/select_bank_list_title"
+                    android:textSize="17dp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_height="10dp"
+                style="@style/line_vertical"
+                android:background="@color/select_bank_dialog_line" />
+
+
+            <com.kaiserkalep.utils.MyMaxHeightRecyclerView
+                android:id="@+id/recyclerView"
+                app:my_rv_max_height="250dp"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@drawable/layer_recycle_scrollbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </com.kaiserkalep.widgets.shadowLayout.ShadowLayout>
+
+
+</LinearLayout>
